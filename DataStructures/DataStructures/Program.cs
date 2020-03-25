@@ -1,10 +1,5 @@
-﻿using DataStructures.LinkedListProblems;
+﻿using DataStructures.ProblemSolving;
 using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using DataStructures.LinkedListProblems.CircularLinkedListChallenges;
-using DataStructures.LinkedListProblems.SingleLinkedListChallenges;
-using DataStructures.ProblemSolving;
 
 namespace DataStructures
 {
