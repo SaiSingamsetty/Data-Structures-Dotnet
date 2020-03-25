@@ -1,5 +1,6 @@
 ﻿using DataStructures.ProblemSolving;
 using System;
+using System.Diagnostics;
 
 namespace DataStructures
 {
