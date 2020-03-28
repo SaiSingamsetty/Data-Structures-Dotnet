@@ -3,6 +3,12 @@
 namespace DataStructures.ProblemSolving
 {
     //LEETCODE https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/
+    /*
+       Input: [7,1,5,3,6,4]
+       Output: 7
+       Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
+       Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
+    */
 
     using System;
 
@@ -19,23 +25,22 @@ namespace DataStructures.ProblemSolving
         }
 
         //Peak Valley Approach Time complexity : O(n) Single pass.
-        private static int FindProfit_PeakValleyApproach(IReadOnlyList<int> prices)
+        private static int FindProfit_PeakValleyApproach(int[] prices)
         {
             var i = 0;
             var maxProfit = 0;
 
-            while (i < prices.Count - 1)
+            while (i < prices.Length - 1)
             {
                 //Find Valley
-                while (i < prices.Count - 1 && prices[i] >= prices[i + 1])
+                while (i < prices.Length - 1 && prices[i] >= prices[i + 1])
                 {
                     i++;
                 }
 
                 var valley = prices[i];
-
                 //Find Peak
-                while (i < prices.Count - 1 && prices[i] <= prices[i + 1])
+                while (i < prices.Length - 1 && prices[i] <= prices[i + 1])
                 {
                     i++;
                 }
@@ -61,9 +66,6 @@ namespace DataStructures.ProblemSolving
 
             return maxProfit;
         }
-
-
-
 
     }
 }

@@ -8,7 +8,7 @@ namespace DataStructures
     {
         private static void Main()
         {
-            BestTimeToBuyAndSellStock.Init();
+            RotateArrayByNSteps.Init();
 
             Console.ReadKey();
         }
