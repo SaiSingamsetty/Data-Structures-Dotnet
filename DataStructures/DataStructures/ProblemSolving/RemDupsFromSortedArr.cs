@@ -1,12 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace DataStructures.ProblemSolving
+﻿namespace DataStructures.ProblemSolving
 {
     // LEETCODE https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/
 
     using System;
-    using System.Diagnostics;
+    using System.Linq;
 
     public static class RemDupsFromSortedArr
     {

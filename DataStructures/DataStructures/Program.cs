@@ -8,7 +8,7 @@ namespace DataStructures
     {
         private static void Main()
         {
-            RemDupsFromSortedArr.Init();
+            BestTimeToBuyAndSellStock.Init();
 
             Console.ReadKey();
         }
