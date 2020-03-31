@@ -1,6 +1,5 @@
-﻿using DataStructures.ProblemSolving;
+﻿using DataStructures.ProblemSolving.Problems;
 using System;
-using System.Diagnostics;
 
 namespace DataStructures
 {
@@ -8,7 +7,7 @@ namespace DataStructures
     {
         private static void Main()
         {
-            RotateArrayByNSteps.Init();
+            RomanToInteger.Init();
 
             Console.ReadKey();
         }

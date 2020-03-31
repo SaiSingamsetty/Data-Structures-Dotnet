@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
-namespace DataStructures.ProblemSolving
+namespace DataStructures.ProblemSolving.Arrays
 {
     //LEETCODE https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/
     /*
@@ -9,9 +10,6 @@ namespace DataStructures.ProblemSolving
        Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
        Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
     */
-
-    using System;
-
     public static class BestTimeToBuyAndSellStock
     {
         public static void Init()

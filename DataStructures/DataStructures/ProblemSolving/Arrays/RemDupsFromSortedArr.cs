@@ -1,14 +1,13 @@
-﻿namespace DataStructures.ProblemSolving
+﻿using System;
+using System.Linq;
+
+namespace DataStructures.ProblemSolving.Arrays
 {
     // LEETCODE https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/
     /*
      * Given nums = [1,1,2]       
        Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
      */
-
-    using System;
-    using System.Linq;
-
     public static class RemDupsFromSortedArr
     {
         public static void Init()
