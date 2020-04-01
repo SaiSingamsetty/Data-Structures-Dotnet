@@ -16,7 +16,6 @@ namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
             secondList.Head.Next.Next.Next.Next = secondList.Head.Next;
 
             var res = FindLengthOfLoop(secondList.Head);
-
         }
 
         private static int FindLengthOfLoop(Node headNode)

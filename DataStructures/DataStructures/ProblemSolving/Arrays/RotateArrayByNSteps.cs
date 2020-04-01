@@ -17,7 +17,7 @@ namespace DataStructures.ProblemSolving.Arrays
     {
         public static void Init()
         {
-            var inputArray = new[] { 1, 2, 3, 4, 5, 6, 7};
+            var inputArray = new[] {1, 2, 3, 4, 5, 6, 7};
             const int n = 3;
             var response = RotateArrayByGivenNoOfSteps(inputArray, n);
             Console.WriteLine(string.Join(' ', response));

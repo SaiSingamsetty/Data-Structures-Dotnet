@@ -14,7 +14,7 @@ namespace DataStructures.ProblemSolving.Arrays
     {
         public static void Init()
         {
-            var inputArray = new[] { 1, 7, 2, 3, 6, 7, 6, 7 };
+            var inputArray = new[] {1, 7, 2, 3, 6, 7, 6, 7};
             var profitPeakValleyApproach = FindProfit_PeakValleyApproach(inputArray);
             Console.WriteLine("Profit through Peak Valley Approach: " + profitPeakValleyApproach);
 
@@ -45,7 +45,6 @@ namespace DataStructures.ProblemSolving.Arrays
 
                 var peak = prices[i];
                 maxProfit += peak - valley;
-
             }
 
             return maxProfit;
@@ -64,6 +63,5 @@ namespace DataStructures.ProblemSolving.Arrays
 
             return maxProfit;
         }
-
     }
 }

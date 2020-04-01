@@ -47,6 +47,7 @@ namespace DataStructures.LinkedListProblems
             {
                 currentNode = currentNode.Next;
             }
+
             currentNode.Next = new Node(newData);
         }
 
@@ -100,7 +101,6 @@ namespace DataStructures.LinkedListProblems
                 return;
 
             prevNode.Next = currentNode.Next;
-
         }
 
         public void DeleteLinkedList()

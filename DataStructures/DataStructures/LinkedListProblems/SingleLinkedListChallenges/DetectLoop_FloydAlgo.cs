@@ -16,7 +16,6 @@ namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
             secondList.Head.Next.Next.Next.Next = secondList.Head.Next;
 
             var res = DetectLoop(secondList.Head);
-            
         }
 
         private static bool DetectLoop(Node head)
@@ -31,8 +30,8 @@ namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
 
                 if (slowPointer == fastPointer)
                     return true;
-
             }
+
             return false;
         }
     }

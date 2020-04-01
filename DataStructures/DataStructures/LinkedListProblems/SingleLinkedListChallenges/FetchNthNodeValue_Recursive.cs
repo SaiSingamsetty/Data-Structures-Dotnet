@@ -31,6 +31,5 @@ namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
 
             return GetNthNode_Helper(node.Next, index - 1);
         }
-
     }
 }

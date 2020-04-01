@@ -12,7 +12,7 @@ namespace DataStructures.ProblemSolving.Arrays
     {
         public static void Init()
         {
-            var intArray = new[] { 1, 1, 2 };
+            var intArray = new[] {1, 1, 2};
             var result = RemoveDuplicatesFromSortedArray(intArray);
             Console.WriteLine("Result: " + result);
         }
@@ -25,7 +25,7 @@ namespace DataStructures.ProblemSolving.Arrays
             for (var i = 0; i < nums.Length; i++)
             {
                 var currentValue = nums[i];
-                if(currentValue == prevValue)
+                if (currentValue == prevValue)
                     continue;
 
                 prevValue = currentValue;

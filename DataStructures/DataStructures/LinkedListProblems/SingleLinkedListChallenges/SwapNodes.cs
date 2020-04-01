@@ -26,6 +26,7 @@ namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
                 prevX = currX;
                 currX = currX.Next;
             }
+
             Node prevY = null, currY = headNode;
             while (currY != null && currY.Data != y)
             {

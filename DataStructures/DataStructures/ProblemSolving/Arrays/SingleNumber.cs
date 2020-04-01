@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataStructures.ProblemSolving.Challenge30Days
+namespace DataStructures.ProblemSolving.Arrays
 {
     //Challenge1
     /*

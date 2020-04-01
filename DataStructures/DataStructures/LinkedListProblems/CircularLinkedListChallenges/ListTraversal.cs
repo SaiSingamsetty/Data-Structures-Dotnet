@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using DataStructures.LinkedListProblems.Models;
 
 namespace DataStructures.LinkedListProblems.CircularLinkedListChallenges
@@ -21,7 +19,6 @@ namespace DataStructures.LinkedListProblems.CircularLinkedListChallenges
             fourthNode.Next = myList.Head;
 
             TraverseList(thirdNode);
-
         }
 
         private static void TraverseList(Node refNode)
@@ -35,7 +32,6 @@ namespace DataStructures.LinkedListProblems.CircularLinkedListChallenges
                 tempNode = tempNode.Next;
                 Console.WriteLine($"Node {tempNode.Data}");
             }
-
         }
     }
 }

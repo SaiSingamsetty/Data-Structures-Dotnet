@@ -13,7 +13,6 @@ namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
             mylist.Head.Next = new Node(3);
 
             var res = SearchLinkedList_Recursive(3, mylist.Head);
-
         }
 
         private static bool SearchLinkedList_Recursive(int searchValue, Node head)
@@ -22,7 +21,7 @@ namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
             return SearchHelperIterative(current, searchValue);
         }
 
-        private static bool SearchHelperIterative(Node node, int searchValue)//Iterate helper Search func
+        private static bool SearchHelperIterative(Node node, int searchValue) //Iterate helper Search func
         {
             if (node == null)
                 return false;
@@ -31,7 +30,6 @@ namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
                 return true;
 
             return SearchHelperIterative(node.Next, searchValue);
-
         }
     }
 }

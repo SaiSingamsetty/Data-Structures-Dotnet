@@ -1,6 +1,5 @@
-﻿using DataStructures.ProblemSolving.Problems;
-using System;
-using DataStructures.ProblemSolving.Challenge30Days;
+﻿using System;
+using DataStructures.ProblemSolving.Arrays;
 
 namespace DataStructures
 {
@@ -8,10 +7,9 @@ namespace DataStructures
     {
         private static void Main()
         {
-            SingleNumber.Init();
+            HasDuplicate.Init();
 
             Console.ReadKey();
         }
-
     }
 }

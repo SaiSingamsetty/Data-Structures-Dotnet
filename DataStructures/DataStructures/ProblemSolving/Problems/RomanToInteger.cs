@@ -1,7 +1,7 @@
-﻿namespace DataStructures.ProblemSolving.Problems
-{
-    using System;
+﻿using System;
 
+namespace DataStructures.ProblemSolving.Problems
+{
     //LEETCODE : https://leetcode.com/problems/roman-to-integer/
     /*
        Input: "III"
@@ -22,19 +22,19 @@
             var sum = 0;
             for (var i = 0; i < s.Length; i++)
             {
-                var currentChar = (Roman)Enum.Parse(typeof(Roman), s[i].ToString());
-                var nextChar = (i + 1 < s.Length) ? (Roman)Enum.Parse(typeof(Roman), s[i + 1].ToString()) : Roman.O;
+                var currentChar = (Roman) Enum.Parse(typeof(Roman), s[i].ToString());
+                var nextChar = (i + 1 < s.Length) ? (Roman) Enum.Parse(typeof(Roman), s[i + 1].ToString()) : Roman.O;
 
                 // If current char is same or greater than next character, then sum it
                 if (currentChar >= nextChar)
                 {
-                    sum += (int)currentChar;
+                    sum += (int) currentChar;
                     continue;
                 }
 
                 // If current char is smaller than next char, We have to take the diff
                 // IV will be (V - I) and increment pointer to skip 'V' in 'IV'
-                sum += ((int)nextChar - (int)currentChar);
+                sum += ((int) nextChar - (int) currentChar);
                 i++;
             }
 
