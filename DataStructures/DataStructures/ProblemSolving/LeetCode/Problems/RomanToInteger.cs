@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataStructures.ProblemSolving.Problems
+namespace DataStructures.ProblemSolving.LeetCode.Problems
 {
     //LEETCODE : https://leetcode.com/problems/roman-to-integer/
     /*

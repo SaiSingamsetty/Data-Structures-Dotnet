@@ -1,5 +1,5 @@
 ﻿using System;
-using DataStructures.ProblemSolving.Arrays;
+using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays;
 
 namespace DataStructures
 {
@@ -7,7 +7,8 @@ namespace DataStructures
     {
         private static void Main()
         {
-            HasDuplicate.Init();
+            //TRY TO IMPROVE CODE PERFORMANCE
+            PlusOne.Init();
 
             Console.ReadKey();
         }

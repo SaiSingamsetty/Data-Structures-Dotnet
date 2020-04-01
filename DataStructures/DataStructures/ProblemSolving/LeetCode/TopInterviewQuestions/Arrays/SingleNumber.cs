@@ -1,7 +1,8 @@
 ﻿using System;
 
-namespace DataStructures.ProblemSolving.Challenge30Days
+namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
 {
+    // LEETCODE https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/549/
     //Challenge1
     /*
         Given a non-empty array of integers, every element appears twice except for one. Find that single one.

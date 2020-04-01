@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DataStructures.ProblemSolving.Arrays
+namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
 {
     //LEETCODE https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/
     /*
