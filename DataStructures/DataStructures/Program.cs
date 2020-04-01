@@ -1,5 +1,6 @@
 ﻿using DataStructures.ProblemSolving.Problems;
 using System;
+using DataStructures.ProblemSolving.Challenge30Days;
 
 namespace DataStructures
 {
@@ -7,7 +8,7 @@ namespace DataStructures
     {
         private static void Main()
         {
-            RomanToInteger.Init();
+            SingleNumber.Init();
 
             Console.ReadKey();
         }
