@@ -8,49 +8,44 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
         Input: [1,2,3]
         Output: [1,2,4]
         Explanation: The array represents the integer 123
+        Input: [9, 9]
+        Output: [1, 0, 0]
      */
 
     public class PlusOne
     {
         public static void Init()
         {
-            var arr = new[] { 9 };
-            var response = PlusOneToArray(arr);
+            var arr = new[] { 1, 2, 9};
+            var response = PlusOneForArray(arr);
             Console.WriteLine("Response: " + response);
         }
-
-        private static int[] PlusOneToArray(int[] digits)
+        
+        private static int[] PlusOneForArray(int[] digits)
         {
-            var carry = 0;
-            if (digits[digits.Length - 1] == 9)
-            {
-                digits[digits.Length - 1] = 0;
-                carry = 1;
-            }
-            else
-            {
-                digits[digits.Length - 1] += 1;
-                return digits;
-            }
+            var carry = 1;
+            var length = digits.Length;
 
-            for (var i = digits.Length - 2; i >= 0; i--)
+            for (var i = length - 1; i >= 0; i--)
             {
-                if (carry == 1)
+                if (carry > 0)
                 {
-                    if (digits[i] == 9)
+                    var temp = digits[i] + carry;
+                    if (temp > 9)
                     {
-                        digits[i] = 0;
-                        carry = 1;
-                        continue;
+                        digits[i] = temp % 10;
                     }
-                    digits[i] += 1;
-                    carry = 0;
+                    else
+                    {
+                        digits[i] = digits[i] + carry;
+                        carry = 0;
+                    }
                 }
             }
 
-            if (carry >= 1)
+            if (carry > 0)
             {
-                var newArray = new int[digits.Length + 1];
+                var newArray = new int[length + 1];
                 newArray[0] = carry;
                 digits.CopyTo(newArray, 1);
                 return newArray;
