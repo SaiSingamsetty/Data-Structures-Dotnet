@@ -8,10 +8,7 @@ namespace DataStructures
     {
         private static void Main()
         {
-            HappyNumber.Init();
-
-            //TRY TO IMPROVE CODE PERFORMANCE
-            PlusOne.Init();
+            MaximumSubArray.Init();
 
             Console.ReadKey();
         }
