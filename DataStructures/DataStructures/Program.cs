@@ -1,4 +1,5 @@
 ﻿using System;
+using DataStructures.ProblemSolving.LeetCode.Problems;
 using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays;
 
 namespace DataStructures
@@ -7,7 +8,7 @@ namespace DataStructures
     {
         private static void Main()
         {
-            IntersectionTwoArrays.Init();
+            SingleNumber3.Init();
 
             Console.ReadKey();
         }
