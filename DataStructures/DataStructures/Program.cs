@@ -1,6 +1,5 @@
-﻿using System;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days;
-using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays;
+﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days;
+using System;
 
 namespace DataStructures
 {
@@ -8,7 +7,7 @@ namespace DataStructures
     {
         private static void Main()
         {
-            MaximumSubArray.Init();
+            MoveZeroes.Init();
 
             Console.ReadKey();
         }
