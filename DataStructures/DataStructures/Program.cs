@@ -1,5 +1,4 @@
-﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days;
-using System;
+﻿using System;
 
 namespace DataStructures
 {
@@ -7,8 +6,6 @@ namespace DataStructures
     {
         private static void Main()
         {
-            MoveZeroes.Init();
-
             Console.ReadKey();
         }
     }

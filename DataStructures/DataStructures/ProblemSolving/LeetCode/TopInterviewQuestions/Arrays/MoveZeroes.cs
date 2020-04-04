@@ -13,7 +13,7 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
     {
         public static void Init()
         {
-            var inputArray = new[] { 1, 0, 0, 3, 0, 5, 0, 0, 6 };
+            var inputArray = new[] {1, 0, 0, 3, 0, 5, 0, 0, 6};
             var response = MoveZeroesInArray(inputArray);
             Console.WriteLine(string.Join(',', response));
         }
@@ -34,12 +34,12 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
                     nextNonZeroValPos = j;
                     break;
                 }
+
                 nums[i] = nums[nextNonZeroValPos];
                 nums[nextNonZeroValPos] = 0;
             }
 
             return nums;
         }
-
     }
 }

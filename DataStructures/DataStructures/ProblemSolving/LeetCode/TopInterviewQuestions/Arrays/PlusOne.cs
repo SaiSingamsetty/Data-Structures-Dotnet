@@ -16,11 +16,11 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
     {
         public static void Init()
         {
-            var arr = new[] { 1, 2, 9};
+            var arr = new[] {1, 2, 9};
             var response = PlusOneForArray(arr);
             Console.WriteLine("Response: " + response);
         }
-        
+
         private static int[] PlusOneForArray(int[] digits)
         {
             var carry = 1;

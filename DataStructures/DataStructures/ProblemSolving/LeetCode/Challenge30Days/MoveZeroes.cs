@@ -1,7 +1,7 @@
-﻿namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
-{
-    using System;
+﻿using System;
 
+namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
+{
     //Challenge4
     //Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
     /*
@@ -13,7 +13,7 @@
     {
         public static void Init()
         {
-            var inputArray = new[] { 1, 0, 0, 3, 0, 5, 0, 0, 6 };
+            var inputArray = new[] {1, 0, 0, 3, 0, 5, 0, 0, 6};
             var response = MoveZeroesInArray(inputArray);
             Console.WriteLine(string.Join(',', response));
         }
@@ -34,12 +34,12 @@
                     nextNonZeroValPos = j;
                     break;
                 }
+
                 nums[i] = nums[nextNonZeroValPos];
                 nums[nextNonZeroValPos] = 0;
             }
 
             return nums;
         }
-
     }
 }

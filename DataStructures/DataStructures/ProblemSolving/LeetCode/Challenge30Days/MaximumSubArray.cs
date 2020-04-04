@@ -9,7 +9,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
     {
         public static void Init()
         {
-            var inputArray = new[] { -2, -3, 4, -1, -2, 1, 5, -3 };
+            var inputArray = new[] {-2, -3, 4, -1, -2, 1, 5, -3};
             var result = FindMaxSubArraySumUsingKadanesAlgo(inputArray);
             Console.WriteLine(result);
 
@@ -38,17 +38,17 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
                     maxSoFar = maxEndingHere;
                     // When it finds a value which is greater than 0, then it will not execute second if condition, it means 
                     // the next value might be the start of the max sub array
-                    start = temp + 1; 
-                    end = counter; 
+                    start = temp + 1;
+                    end = counter;
                 }
 
                 if (maxEndingHere < 0)
                 {
                     maxEndingHere = 0;
-                    temp = counter;  // Every time it refreshes, store the location in temp
+                    temp = counter; // Every time it refreshes, store the location in temp
                 }
 
-                counter++;  // similar to i in for loop
+                counter++; // similar to i in for loop
             }
 
             Console.WriteLine("Start and End locations: " + start + ", " + end);
@@ -71,8 +71,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
             }
 
             return maxSoFar;
-
         }
-
     }
 }
