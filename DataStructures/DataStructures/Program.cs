@@ -1,7 +1,5 @@
-﻿using System;
-using DataStructures.ProblemSolving.LeetCode.Problems;
-using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays;
-using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings;
+﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days;
+using System;
 
 namespace DataStructures
 {
@@ -9,7 +7,7 @@ namespace DataStructures
     {
         private static void Main()
         {
-            ReverseInteger.Init();
+            CountingElements.Init();
 
             Console.ReadKey();
         }
