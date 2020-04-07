@@ -16,7 +16,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
     {
         public static void Init()
         {
-            var arr = new[] { 1, 1, 2 };
+            var arr = new[] {1, 1, 2};
             var response = CountElements(arr);
             Console.WriteLine(response);
         }
@@ -33,7 +33,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
 
             foreach (var i in arr)
             {
-                if (hashSet.Contains(i+1))
+                if (hashSet.Contains(i + 1))
                 {
                     counter++;
                 }

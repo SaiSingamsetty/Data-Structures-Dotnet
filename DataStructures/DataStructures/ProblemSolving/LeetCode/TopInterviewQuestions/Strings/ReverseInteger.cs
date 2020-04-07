@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
 {
@@ -30,6 +28,5 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
 
             return sum;
         }
-
     }
 }

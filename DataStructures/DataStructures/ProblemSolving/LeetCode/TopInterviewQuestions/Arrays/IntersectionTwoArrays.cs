@@ -14,7 +14,6 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
             var inputArray2 = new int[] {2, 2};
             var response = Intersect(inputArray1, inputArray2);
             Console.WriteLine(string.Join(',', response));
-
         }
 
         private static int[] Intersect(int[] nums1, int[] nums2)
@@ -44,7 +43,6 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
             }
 
             return outputList.ToArray();
-
         }
     }
 }

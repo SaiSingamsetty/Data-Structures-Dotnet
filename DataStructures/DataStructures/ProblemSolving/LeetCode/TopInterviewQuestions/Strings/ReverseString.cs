@@ -14,7 +14,7 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
     {
         public static void Init()
         {
-            var stringArray = new[] { 's', 'a', 'i', 't' };
+            var stringArray = new[] {'s', 'a', 'i', 't'};
             var response = ReverseStringArray(stringArray);
             Console.WriteLine(string.Join(',', response));
         }

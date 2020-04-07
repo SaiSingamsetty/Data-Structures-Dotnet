@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DataStructures.ProblemSolving.LeetCode.Problems
@@ -8,14 +9,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
     //Find the two elements that appear only once.
     //Input:  [1,2,1,3,2,5]
     //Output: [3,5]
-
-    using System;
-
     public class SingleNumber3
     {
         public static void Init()
         {
-            var inputArray = new int[] { 1, 2, 1, 3, 2, 5 };
+            var inputArray = new int[] {1, 2, 1, 3, 2, 5};
             var response = FindSingleNumbersUsingDictionary(inputArray);
             Console.WriteLine(string.Join(',', response));
         }
@@ -29,7 +27,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
 
             //Find Set Bit
             //AND Between xorResult and (2's Complement of xorResult)
-            var setBit = xorOfUniqueNums & ((~ xorOfUniqueNums) + 1); 
+            var setBit = xorOfUniqueNums & ((~ xorOfUniqueNums) + 1);
 
             // Create two groups of original number sequence.
             //First in which the mast bit is set and second where it is not set
@@ -38,7 +36,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
 
             var uniqueNum1 = numbersWithSetBit.Aggregate((x, y) => x ^ y);
             var uniqueNum2 = numbersWithBitNotSet.Aggregate((x, y) => x ^ y);
-            return new int[] { uniqueNum1, uniqueNum2 };
+            return new int[] {uniqueNum1, uniqueNum2};
         }
 
         private static int[] FindSingleNumbersInAnArrayUsingSorting(int[] nums)
@@ -53,6 +51,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
                     i++;
                     continue;
                 }
+
                 outputList.Add(nums[i]);
             }
 
@@ -79,7 +78,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
 
             var uniqueNum1 = numbersWithSetBit.Aggregate((x, y) => x ^ y);
             var uniqueNum2 = numbersWithBitNotSet.Aggregate((x, y) => x ^ y);
-            return new int[] { uniqueNum1, uniqueNum2 };
+            return new int[] {uniqueNum1, uniqueNum2};
         }
 
         private static int[] FindSingleNumbersUsingDictionary(int[] nums)
