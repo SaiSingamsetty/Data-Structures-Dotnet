@@ -5,6 +5,19 @@ using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
 {
+    //LEETCODE: Challenge6 https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/528/week-1/3288/
+    //Given an array of strings, group anagrams together.
+    /*
+     * Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
+       Output:
+       [
+       ["ate","eat","tea"],
+       ["nat","tan"],
+       ["bat"]
+       ]
+     */
+
+
     public class GroupAnagrams
     {
         public static void Init()
