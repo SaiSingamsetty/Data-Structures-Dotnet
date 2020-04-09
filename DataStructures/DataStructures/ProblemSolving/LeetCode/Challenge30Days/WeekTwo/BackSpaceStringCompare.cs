@@ -22,9 +22,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
     {
         public static void Init()
         {
-            const string s = "ab#c";
-            const string t = "ad#c";
-            var response = AreSameStrings(s, t);
+            const string s = "bbbextm";
+            const string t = "bbb#extm";
+            var response = AreSameStringsLessSpace(s, t);
             Console.WriteLine(response);
         }
 
@@ -67,6 +67,65 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
             }
 
             return sStack.Count == 0 && tStack.Count == 0;
+        }
+
+        //Less Space and faster
+        private static bool AreSameStringsLessSpace(string S, string T)
+        {
+            var sPointer = S.Length - 1;
+            var sSkips = 0;
+            var tPointer = T.Length - 1;
+            var tSkips = 0;
+
+            while (sPointer >= 0 || tPointer >= 0)
+            {
+                while (sPointer >= 0)
+                {
+                    if (S[sPointer] == '#')
+                    {
+                        sSkips++;
+                        sPointer--;
+                    }
+                    else if (sSkips > 0)
+                    {
+                        sSkips--;
+                        sPointer--;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                while (tPointer >= 0)
+                {
+                    if (T[tPointer] == '#')
+                    {
+                        tSkips++;
+                        tPointer--;
+                    }
+                    else if (tSkips > 0)
+                    {
+                        tSkips--;
+                        tPointer--;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                if (sPointer >= 0 && tPointer >= 0 && S[sPointer] != T[tPointer])
+                    return false;
+
+                if (sPointer >= 0 != tPointer >= 0)
+                    return false;
+
+                sPointer--;
+                tPointer--;
+            }
+
+            return true;
         }
 
         //References: https://www.programcreek.com/2012/04/leetcode-backspace-string-compare-java/
