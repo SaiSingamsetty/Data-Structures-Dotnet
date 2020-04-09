@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
+namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekOne
 {
     //Challenge3
     //Given an integer array nums, find the contiguous sub array (containing at least one number) which has the largest sum and return its sum.

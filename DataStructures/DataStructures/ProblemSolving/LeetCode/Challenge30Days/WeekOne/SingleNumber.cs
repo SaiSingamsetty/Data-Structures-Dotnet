@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
+namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekOne
 {
     //Challenge1
     /*

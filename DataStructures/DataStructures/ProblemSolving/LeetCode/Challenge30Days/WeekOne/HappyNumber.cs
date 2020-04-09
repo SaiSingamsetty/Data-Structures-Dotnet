@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
+namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekOne
 {
     //Challenge2
     /*

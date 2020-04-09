@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
+namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekOne
 {
     //LEETCODE: Challenge6 https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/528/week-1/3288/
     //Given an array of strings, group anagrams together.

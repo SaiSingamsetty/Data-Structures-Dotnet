@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days
+namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekOne
 {
     //Challenge4
     //Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
