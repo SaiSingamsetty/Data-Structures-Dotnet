@@ -1,10 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
 {
+    //LEETCODE: Challenge8
+    //Given a non-empty, singly linked list with head node head, return a middle node of linked list. 
+    //If there are two middle nodes, return the second middle node.
+    //https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/529/week-2/3290/
+    //Input: [1,2,3,4,5]
+    // Output: Node 3 from this list
+    //Input: [1,2,3,4,5,6]
+    // Output: Node 4 from this list
+
+
     public class MiddleNode
     {
         public static void Init()
