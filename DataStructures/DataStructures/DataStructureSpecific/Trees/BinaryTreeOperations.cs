@@ -42,6 +42,12 @@ namespace DataStructures.DataStructureSpecific.Trees
             }
         }
 
+        public static void DeleteNode<T>(this TreeNode<T> currentNode, T value)
+        {
+            //TODO:WIP
+
+        }
+
         #region Depth First Search Traversal
 
         public static void PreOrderTraversal<T>(this TreeNode<T> currentNode)
@@ -85,18 +91,15 @@ namespace DataStructures.DataStructureSpecific.Trees
                 var node = queue.Dequeue();
                 Console.WriteLine("Data: " + node.Data);
 
-                if(node.LeftChild != null)
+                if (node.LeftChild != null)
                     queue.Enqueue(node.LeftChild);
 
-                if(node.RightChild != null)
+                if (node.RightChild != null)
                     queue.Enqueue(node.RightChild);
             }
 
         }
 
         #endregion
-
-
-
     }
 }
