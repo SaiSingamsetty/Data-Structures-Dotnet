@@ -19,7 +19,6 @@ namespace DataStructures.DataStructureSpecific.Trees
             var responseFor52 = rootNode.SearchForNode(52);
             var responseFor23 = rootNode.SearchForNode(23);
             var responseFor0 = rootNode.SearchForNode(0);
-
         }
     }
 }

@@ -46,7 +46,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
             ms.GetMin();
             ms.Top();
         }
-
     }
 
     #region HelperClasses
@@ -105,11 +104,10 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
 
     public class StackObject
     {
-        public int Value;
-
         public int MinValue;
 
         public StackObject Next;
+        public int Value;
 
         public StackObject(int value)
         {

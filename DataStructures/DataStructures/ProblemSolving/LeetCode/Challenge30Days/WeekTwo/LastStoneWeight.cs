@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
 {
@@ -31,7 +29,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
         private static int FindLastStoneWeight(int[] stones)
         {
             var listOfStones = stones.ToList();
-            
+
             while (listOfStones.Count >= 2)
             {
                 var maxValue = listOfStones.Max();
@@ -39,10 +37,10 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
                 var secondMaxValue = listOfStones.Max();
                 listOfStones.Remove(secondMaxValue);
 
-                if(maxValue != secondMaxValue)
+                if (maxValue != secondMaxValue)
                     listOfStones.Add(maxValue - secondMaxValue);
             }
-            
+
             return listOfStones.FirstOrDefault();
         }
     }

@@ -1,6 +1,6 @@
-﻿using DataStructures.DataStructureSpecific.Trees.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using DataStructures.DataStructureSpecific.Trees.Models;
 
 namespace DataStructures.DataStructureSpecific.Trees
 {
@@ -42,11 +42,127 @@ namespace DataStructures.DataStructureSpecific.Trees
             }
         }
 
+        public static void AddChildInLevelOrder<T>(this TreeNode<T> currentNode, T value)
+        {
+            var queue = new Queue<TreeNode<T>>();
+            queue.Enqueue(currentNode);
+
+            while (queue.Count != 0)
+            {
+                var pointer = queue.Dequeue();
+
+                if (pointer.LeftChild == null)
+                {
+                    pointer.LeftChild = new TreeNode<T>(value);
+                    break;
+                }
+                else
+                {
+                    queue.Enqueue(pointer.LeftChild);
+                }
+
+                if (pointer.RightChild == null)
+                {
+                    pointer.RightChild = new TreeNode<T>(value);
+                    break;
+                }
+                else
+                {
+                    queue.Enqueue(pointer.RightChild);
+                }
+            }
+        }
+
         public static void DeleteNode<T>(this TreeNode<T> currentNode, T value)
         {
-            //TODO:WIP
+            // Find the key node to be deleted, right most bottom node to be replaced with key node
+            var queue = new Queue<TreeNode<T>>();
+            queue.Enqueue(currentNode);
+            TreeNode<T> keyNode = null;
 
+            //As queue is enqueue-ed in such a way that it will go till last node which will be right most bottom node
+            TreeNode<T> bottomNode = null;
+
+            while (queue.Count != 0)
+            {
+                bottomNode = queue.Dequeue();
+                if (bottomNode.Data == (dynamic) value && keyNode == null)
+                {
+                    keyNode = bottomNode;
+                }
+
+                if (bottomNode.LeftChild != null)
+                    queue.Enqueue(bottomNode.LeftChild);
+                if (bottomNode.RightChild != null)
+                    queue.Enqueue(bottomNode.RightChild);
+            }
+
+            if (keyNode == null)
+                return;
+
+            var data = bottomNode.Data;
+
+            //Delete the right most bottom node
+            queue.Clear();
+            queue.Enqueue(currentNode);
+
+            while (queue.Count != 0)
+            {
+                var pointer = queue.Dequeue();
+                if (pointer == bottomNode)
+                {
+                    bottomNode = null;
+                    break;
+                }
+
+                if (pointer.LeftChild != null)
+                {
+                    if (pointer.LeftChild == bottomNode)
+                    {
+                        pointer.LeftChild = null;
+                        break;
+                    }
+
+                    queue.Enqueue(pointer.LeftChild);
+                }
+
+                if (pointer.RightChild != null)
+                {
+                    if (pointer.RightChild == bottomNode)
+                    {
+                        pointer.RightChild = null;
+                        break;
+                    }
+
+                    queue.Enqueue(pointer.RightChild);
+                }
+            }
+
+            //Replace data of key node with right most bottom 
+            keyNode.Data = data;
         }
+
+        #region Breadth First Search Traversal
+
+        public static void BreadthFirstSearchTraversal<T>(this TreeNode<T> currentNode)
+        {
+            var queue = new Queue<TreeNode<T>>();
+            queue.Enqueue(currentNode);
+
+            while (queue.Count != 0)
+            {
+                var node = queue.Dequeue();
+                Console.WriteLine("Data: " + node.Data);
+
+                if (node.LeftChild != null)
+                    queue.Enqueue(node.LeftChild);
+
+                if (node.RightChild != null)
+                    queue.Enqueue(node.RightChild);
+            }
+        }
+
+        #endregion
 
         #region Depth First Search Traversal
 
@@ -75,29 +191,6 @@ namespace DataStructures.DataStructureSpecific.Trees
             currentNode.RightChild?.PostOrderTraversal();
 
             Console.WriteLine("Data: " + currentNode.Data);
-        }
-
-        #endregion
-
-        #region Breadth First Search Traversal
-
-        public static void BreadthFirstSearchTraversal<T>(this TreeNode<T> currentNode)
-        {
-            var queue = new Queue<TreeNode<T>>();
-            queue.Enqueue(currentNode);
-
-            while (queue.Count != 0)
-            {
-                var node = queue.Dequeue();
-                Console.WriteLine("Data: " + node.Data);
-
-                if (node.LeftChild != null)
-                    queue.Enqueue(node.LeftChild);
-
-                if (node.RightChild != null)
-                    queue.Enqueue(node.RightChild);
-            }
-
         }
 
         #endregion

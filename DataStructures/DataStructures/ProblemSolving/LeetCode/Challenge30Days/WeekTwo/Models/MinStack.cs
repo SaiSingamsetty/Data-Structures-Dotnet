@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo.Models
 {
     public class MinStack
     {
+        private readonly Stack<int> _minValueStack;
+
         /** initialize your data structure here. */
         private readonly Stack<int> _stack;
-        private readonly Stack<int> _minValueStack;
 
         public MinStack()
         {
@@ -25,13 +24,14 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo.Models
 
         public void Pop()
         {
-            if(_stack.Count == 0 || _minValueStack.Count ==0)
+            if (_stack.Count == 0 || _minValueStack.Count == 0)
                 return;
-            
+
             if (_stack.Peek().Equals(_minValueStack.Peek()))
             {
                 _minValueStack.Pop();
             }
+
             _stack.Pop();
         }
 

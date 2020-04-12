@@ -1,5 +1,4 @@
-﻿using System;
-using DataStructures.DataStructureSpecific.Trees.Models;
+﻿using DataStructures.DataStructureSpecific.Trees.Models;
 
 namespace DataStructures.DataStructureSpecific.Trees
 {
@@ -8,6 +7,12 @@ namespace DataStructures.DataStructureSpecific.Trees
     public static class BinaryTree
     {
         public static void Init()
+        {
+            var rootNode = CreateTreeOfTypeString();
+            rootNode.DeleteNode("d");
+        }
+
+        private static TreeNode<string> CreateTreeOfTypeString()
         {
             var rootNode = new TreeNode<string>("a");
             rootNode.AddLeftChild("b");
@@ -20,21 +25,7 @@ namespace DataStructures.DataStructureSpecific.Trees
             cNode.AddRightChild("f");
             cNode.AddLeftChild("e");
 
-            //Tree Traversals
-            //DFS
-            Console.WriteLine("Pre Order Traversal.");
-            rootNode.PreOrderTraversal();
-
-            Console.WriteLine("In order traversal.");
-            rootNode.InOrderTraversal();
-
-            Console.WriteLine("Post order traversal.");
-            rootNode.PostOrderTraversal();
-
-            //BFS
-            Console.WriteLine("Breadth First Search Traversal.");
-            rootNode.BreadthFirstSearchTraversal();
-
+            return rootNode;
         }
     }
 }

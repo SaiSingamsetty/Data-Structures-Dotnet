@@ -1,5 +1,5 @@
-﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo.Models;
-using System;
+﻿using System;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
 {
@@ -14,7 +14,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
         {
             TreeNode rootNode = new TreeNode(1);
             rootNode.left = new TreeNode(2);
-            rootNode.right  = new TreeNode(3);
+            rootNode.right = new TreeNode(3);
             rootNode.left.left = new TreeNode(4);
             rootNode.left.right = new TreeNode(5);
             var response = GetDiameter(rootNode);
