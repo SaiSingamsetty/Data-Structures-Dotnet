@@ -1,6 +1,6 @@
-﻿using DataStructures.LinkedListProblems.Models;
+﻿using DataStructures.DataStructureSpecific.LinkedListProblems.Models;
 
-namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
+namespace DataStructures.DataStructureSpecific.LinkedListProblems.SingleLinkedListChallenges
 {
     public static class SearchingListRecursive
     {

@@ -1,7 +1,7 @@
 ﻿using System;
-using DataStructures.LinkedListProblems.Models;
+using DataStructures.DataStructureSpecific.LinkedListProblems.Models;
 
-namespace DataStructures.LinkedListProblems.CircularLinkedListChallenges
+namespace DataStructures.DataStructureSpecific.LinkedListProblems.CircularLinkedListChallenges
 {
     public static class ListTraversal
     {

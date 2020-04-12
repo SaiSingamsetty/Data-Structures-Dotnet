@@ -1,4 +1,4 @@
-﻿namespace DataStructures.LinkedListProblems.Models
+﻿namespace DataStructures.DataStructureSpecific.LinkedListProblems.Models
 {
     public class Node
     {

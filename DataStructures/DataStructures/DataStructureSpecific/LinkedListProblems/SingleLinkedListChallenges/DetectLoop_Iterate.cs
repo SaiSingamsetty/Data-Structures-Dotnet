@@ -1,8 +1,9 @@
-﻿using DataStructures.LinkedListProblems.Models;
+﻿using System.Collections.Generic;
+using DataStructures.DataStructureSpecific.LinkedListProblems.Models;
 
-namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
+namespace DataStructures.DataStructureSpecific.LinkedListProblems.SingleLinkedListChallenges
 {
-    public static class DetectLoopFloydAlgo
+    public static class DetectLoopIterate
     {
         public static void Init()
         {
@@ -20,16 +21,16 @@ namespace DataStructures.LinkedListProblems.SingleLinkedListChallenges
 
         private static bool DetectLoop(Node head)
         {
-            var slowPointer = head;
-            var fastPointer = head;
-
-            while (slowPointer != null && fastPointer?.Next != null)
+            var h = head;
+            var s = new HashSet<Node>();
+            while (h != null)
             {
-                slowPointer = slowPointer.Next;
-                fastPointer = fastPointer.Next.Next;
-
-                if (slowPointer == fastPointer)
+                if (s.Contains(h))
                     return true;
+
+                s.Add(h);
+
+                h = h.Next;
             }
 
             return false;

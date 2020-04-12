@@ -1,7 +1,7 @@
 ﻿using System;
-using DataStructures.LinkedListProblems.Models;
+using DataStructures.DataStructureSpecific.LinkedListProblems.Models;
 
-namespace DataStructures.LinkedListProblems
+namespace DataStructures.DataStructureSpecific.LinkedListProblems
 {
     public class LinkedList
     {
