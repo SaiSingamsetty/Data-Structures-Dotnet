@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
 {
@@ -18,7 +16,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
             var length = nums.Length;
             var pre = new int[length];
             var temp = 1;
-            
+
             //In this loop, temp variable contains product of elements on left side excluding arr[i]
             for (var i = 0; i < length; i++)
             {
@@ -57,7 +55,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
             // In this loop, temp variable contains product of elements on right side excluding arr[i]
             for (var i = length - 1; i >= 0; i--)
             {
-                post[i] =  temp;
+                post[i] = temp;
                 temp = temp * nums[i];
             }
 
@@ -68,8 +66,5 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
 
             return pre;
         }
-
-
-
     }
 }

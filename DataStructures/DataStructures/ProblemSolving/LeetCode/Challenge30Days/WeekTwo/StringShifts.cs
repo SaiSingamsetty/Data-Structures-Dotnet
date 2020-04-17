@@ -25,7 +25,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekTwo
         public static void Init()
         {
             var str = "abcde";
-            var response = Shift(str, new[] { new[] { 1, 7 } });
+            var response = Shift(str, new[] {new[] {1, 7}});
             Console.WriteLine(response);
         }
 

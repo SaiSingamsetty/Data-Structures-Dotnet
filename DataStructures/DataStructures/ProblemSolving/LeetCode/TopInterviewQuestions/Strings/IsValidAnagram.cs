@@ -25,36 +25,36 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
         //We are using dictionary because it will support even if there are other unicode type characters &,*$ as well.
         private static bool IsAnagramUsingDictionary(string s, string t)
         {
-           var dict = new Dictionary<char, int>();
+            var dict = new Dictionary<char, int>();
 
-           if (s.Length != t.Length)
-               return false;
+            if (s.Length != t.Length)
+                return false;
 
-           foreach (var eachChar in s)
-           {
-               if (dict.ContainsKey(eachChar))
-               {
-                   dict[eachChar]++;
-               }
-               else
-               {
-                   dict.Add(eachChar, 1);
-               }
-           }
+            foreach (var eachChar in s)
+            {
+                if (dict.ContainsKey(eachChar))
+                {
+                    dict[eachChar]++;
+                }
+                else
+                {
+                    dict.Add(eachChar, 1);
+                }
+            }
 
-           foreach (var eachChar in t)
-           {
-               if (dict.ContainsKey(eachChar))
-               {
-                   dict[eachChar]--;
-               }
-               else
-               {
-                   return false;
-               }
-           }
+            foreach (var eachChar in t)
+            {
+                if (dict.ContainsKey(eachChar))
+                {
+                    dict[eachChar]--;
+                }
+                else
+                {
+                    return false;
+                }
+            }
 
-           return dict.All(keyValue => keyValue.Value == 0);
+            return dict.All(keyValue => keyValue.Value == 0);
         }
 
         private static bool IsAnagramUsingFixedCharArray(string s, string t)
@@ -63,6 +63,7 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
             {
                 return false;
             }
+
             var table = new int[26];
 
             foreach (var eachChar in s)
@@ -78,6 +79,7 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
                     return false;
                 }
             }
+
             return true;
         }
     }
