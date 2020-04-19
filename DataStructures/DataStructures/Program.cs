@@ -1,5 +1,4 @@
-﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree;
-using System;
+﻿using System;
 
 namespace DataStructures
 {
@@ -7,7 +6,6 @@ namespace DataStructures
     {
         private static void Main()
         {
-            SearchInRotatedSortedArray.Init();
             Console.ReadKey();
         }
     }
