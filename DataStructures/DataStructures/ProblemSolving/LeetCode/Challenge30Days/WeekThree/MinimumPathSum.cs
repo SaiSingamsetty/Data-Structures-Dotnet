@@ -29,6 +29,10 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
             Console.WriteLine(FindMinimumPathSum(arr));
         }
 
+        //Recursive Approach
+        // minCost(m, n) = min (minCost(m-1, n-1), minCost(m-1, n), minCost(m, n-1)) + cost[m][n]
+        // Time complexity of this naive recursive solution is exponential and it is terribly slow.
+
         private static int FindMinimumPathSum(int[][] grid)
         {
             var rows = grid.Length;
