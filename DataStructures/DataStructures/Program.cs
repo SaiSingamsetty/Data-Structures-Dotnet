@@ -1,4 +1,5 @@
 ﻿using System;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree;
 
 namespace DataStructures
 {
@@ -6,6 +7,7 @@ namespace DataStructures
     {
         private static void Main()
         {
+            ConstructBstFromPreOrderTraversal.Init();
             Console.ReadKey();
         }
     }
