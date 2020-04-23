@@ -9,7 +9,6 @@ namespace DataStructures
     {
         private static void Main()
         {
-
             //Refactor
             SubArraySumEqualsK.Init();
 

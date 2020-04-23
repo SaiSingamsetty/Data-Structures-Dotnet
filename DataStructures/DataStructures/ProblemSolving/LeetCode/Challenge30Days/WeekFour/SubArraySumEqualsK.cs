@@ -19,6 +19,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
 
         //https://www.youtube.com/watch?v=HbbYPQc-Oo4
         //https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/
+        //https://codeshare.io/2KR9qo
 
         private static int SubArraySum(int[] nums, int k)
         {
