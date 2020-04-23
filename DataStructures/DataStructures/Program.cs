@@ -9,9 +9,6 @@ namespace DataStructures
     {
         private static void Main()
         {
-            //Refactor
-            SubArraySumEqualsK.Init();
-
             //Incomplete
             ValidateBinarySearchTree.Init();
 

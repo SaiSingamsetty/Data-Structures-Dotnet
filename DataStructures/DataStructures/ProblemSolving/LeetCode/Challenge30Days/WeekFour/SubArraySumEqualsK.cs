@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
 {
@@ -14,12 +13,15 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
         public static void Init()
         {
             var arr = new[] { 3, 4, 7, 2, -3, 1, 4, 2 };
-            Console.WriteLine(SubArraySum(arr, 7));
+            Console.WriteLine("Count: " + SubArraySum_Approach2(arr, 7));
         }
+
+        #region Approach 1 Using  Dictionary to store frequency of sum
 
         //https://www.youtube.com/watch?v=HbbYPQc-Oo4
         //https://www.geeksforgeeks.org/number-subarrays-sum-exactly-equal-k/
         //https://codeshare.io/2KR9qo
+        //https://www.youtube.com/watch?v=YkacnIOt2jM **** Must watch
 
         private static int SubArraySum(int[] nums, int k)
         {
@@ -45,10 +47,62 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
                 {
                     lookUp.Add(sumTillNow, 1);
                 }
-                
+
             }
 
             return counter;
         }
+
+        #endregion
+
+        #region Approach 2 Same as Approach 1 with Index Storage and Printing Sub arrays
+
+        private static int SubArraySum_Approach2(int[] nums, int k)
+        {
+            var lookUp = new Dictionary<int, List<int>>
+            {
+                {0, new List<int>() {-1}}
+            };
+
+            var sumSoFar = 0;
+            var counter = 0;
+
+            for (var i = 0; i < nums.Length; i++)
+            {
+                sumSoFar += nums[i];
+
+                if (lookUp.ContainsKey(sumSoFar - k))
+                {
+                    var curList = lookUp[sumSoFar - k];
+                    counter += curList.Count;
+
+                    foreach (var i1 in curList)
+                    {
+                        PrintSubArray(nums, i1 + 1, i);
+                    }
+                }
+
+                if (!lookUp.ContainsKey(sumSoFar))
+                    lookUp.Add(sumSoFar, new List<int>() { i });
+                else
+                {
+                    lookUp[sumSoFar].Add(i);
+                }
+
+            }
+
+            return counter;
+        }
+
+        private static void PrintSubArray(int[] arr, int i, int j)
+        {
+            for (int k = i; k < j + 1; k++)
+            {
+                Console.Write(arr[k] + " ");
+            }
+            Console.WriteLine();
+        }
+
+        #endregion
     }
 }
