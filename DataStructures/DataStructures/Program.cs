@@ -1,4 +1,5 @@
 ﻿using System;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree;
 using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Trees;
 
 namespace DataStructures
@@ -11,7 +12,7 @@ namespace DataStructures
             ValidateBinarySearchTree.Init();
 
             //Refactor
-            ConstructBstFromPreOrderTraversal.Init();
+            ConstructBstPreOrderTraversal.Init();
 
             Console.ReadKey();
         }
