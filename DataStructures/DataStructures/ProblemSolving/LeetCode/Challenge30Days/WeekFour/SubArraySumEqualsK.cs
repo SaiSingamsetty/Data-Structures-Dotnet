@@ -12,7 +12,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
     {
         public static void Init()
         {
-            var arr = new[] { 3, 4, 7, 2, -3, 1, 4, 2 };
+            var arr = new[] {3, 4, 7, 2, -3, 1, 4, 2};
             Console.WriteLine("Count: " + SubArraySum_Approach2(arr, 7));
         }
 
@@ -47,7 +47,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
                 {
                     lookUp.Add(sumTillNow, 1);
                 }
-
             }
 
             return counter;
@@ -83,12 +82,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
                 }
 
                 if (!lookUp.ContainsKey(sumSoFar))
-                    lookUp.Add(sumSoFar, new List<int>() { i });
+                    lookUp.Add(sumSoFar, new List<int>() {i});
                 else
                 {
                     lookUp[sumSoFar].Add(i);
                 }
-
             }
 
             return counter;
@@ -100,6 +98,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
             {
                 Console.Write(arr[k] + " ");
             }
+
             Console.WriteLine();
         }
 

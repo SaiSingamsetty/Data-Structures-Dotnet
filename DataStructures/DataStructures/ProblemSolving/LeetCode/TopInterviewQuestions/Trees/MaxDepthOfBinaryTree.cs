@@ -1,5 +1,5 @@
-﻿using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Trees.Models;
-using System;
+﻿using System;
+using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Trees.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Trees
 {
@@ -22,6 +22,19 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Trees
 
             Console.WriteLine(FindMaxDepth(rootNode));
         }
+
+        #region Approach 2 Optimized code of Approach 1
+
+        private int GetMaxDepth(TreeNode<int> root)
+        {
+            if (root == null)
+                return 0;
+
+
+            return Math.Max(GetMaxDepth(root.left), GetMaxDepth(root.right)) + 1;
+        }
+
+        #endregion
 
         #region Approach 1
 
@@ -48,22 +61,6 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Trees
             return depth;
         }
 
-
         #endregion
-
-        #region Approach 2 Optimized code of Approach 1
-
-        private int GetMaxDepth(TreeNode<int> root)
-        {
-
-            if (root == null)
-                return 0;
-
-
-            return Math.Max(GetMaxDepth(root.left), GetMaxDepth(root.right)) + 1;
-        }
-
-        #endregion
-
     }
 }

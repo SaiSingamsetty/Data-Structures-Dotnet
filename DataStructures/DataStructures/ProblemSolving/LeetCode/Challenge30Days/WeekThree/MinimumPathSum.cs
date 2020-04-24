@@ -66,6 +66,5 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
 
             return tempGrid[rows - 1, cols - 1];
         }
-
     }
 }

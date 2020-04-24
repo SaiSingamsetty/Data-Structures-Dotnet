@@ -23,7 +23,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
 
         public IList<int> Dimensions()
         {
-            return new List<int>() { 3, 4 };
+            return new List<int>() {3, 4};
         }
     }
 
@@ -60,13 +60,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
                 {
                     x--;
                 }
-
             }
 
             return result + 1;
         }
 
         #endregion
-
     }
 }

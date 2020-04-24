@@ -43,7 +43,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
                         noOfIslands++;
                     }
                 }
-
             }
 
             return noOfIslands;
@@ -60,7 +59,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
             MarkFieldAsVisited(grid, x - 1, y, rows, cols);
             MarkFieldAsVisited(grid, x, y + 1, rows, cols);
             MarkFieldAsVisited(grid, x, y - 1, rows, cols);
-
         }
     }
 }

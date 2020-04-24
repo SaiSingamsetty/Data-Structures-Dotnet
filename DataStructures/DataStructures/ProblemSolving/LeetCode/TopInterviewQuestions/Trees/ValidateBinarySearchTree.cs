@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design.Serialization;
-using System.Text;
 using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Trees.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Trees
@@ -13,40 +10,50 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Trees
             var rootNode = new TreeNode<int>(2);
             rootNode.left = new TreeNode<int>(1);
             rootNode.right = new TreeNode<int>(3);
-            rootNode.left.left = new TreeNode<int>(4);
+            //rootNode.left.left = new TreeNode<int>(4);
 
-            Console.WriteLine(ValidateBinarySearchTreeRecursively(rootNode));
+            Console.WriteLine(ValidateBinarySearchTreeInOrderRule(rootNode));
         }
 
-        private static bool ValidateBinarySearchTreeRecursively(TreeNode<int> root)
+        #region Approach 1: Inorder Traversal
+
+        private static bool ValidateBinarySearchTreeInOrderRule(TreeNode<int> root)
         {
-            if (root != null)
-            {
-                if (root.left != null)
-                {
-                    if (root.val <= root.left.val)
-                        return false;
-                }
+            if (root == null)
+                return true;
 
-                if (root.right != null)
-                {
-                    if (root.val >= root.right.val)
-                        return false;
-                }
+            //In-order for BST is always increased order.
+            var maxSoFar = int.MinValue;
+            var endFlag = false;
 
-                var leftSubTree =  ValidateBinarySearchTreeRecursively(root.left);
-                if (!leftSubTree)
-                    return false;
+            InOrderTraversal(root, ref maxSoFar, ref endFlag);
 
-                var rightSubTree = ValidateBinarySearchTreeRecursively(root.right);
-                if (!rightSubTree)
-                    return false;
-            }
+            if (maxSoFar == int.MinValue)
+                return false;
 
             return true;
         }
 
+        private static void InOrderTraversal(TreeNode<int> node, ref int maxSoFar, ref bool endFlag)
+        {
+            if (node.left != null)
+                InOrderTraversal(node.left, ref maxSoFar, ref endFlag);
 
+            if (endFlag)
+                return;
 
+            if (node.val > maxSoFar)
+                maxSoFar = node.val;
+            else
+            {
+                maxSoFar = int.MinValue;
+                endFlag = true;
+            }
+
+            if (node.right != null)
+                InOrderTraversal(node.right, ref maxSoFar, ref endFlag);
+        }
+
+        #endregion
     }
 }

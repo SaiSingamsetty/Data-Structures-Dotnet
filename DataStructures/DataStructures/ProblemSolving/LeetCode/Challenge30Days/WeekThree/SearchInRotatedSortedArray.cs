@@ -36,6 +36,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
                         return i;
                 }
             }
+
             for (var i = nums.Length - 1; i >= 0; i--)
             {
                 if (target == nums[i])
@@ -50,6 +51,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
 
 
         //Ref: https://www.youtube.com/watch?v=oTfPJKGEHcc&t=1s
+
         #region Approach 2 (O(logN) time complexity using Binary Search)
 
         private static int SearchInRotatedSortedArrayUsingBinarySearch(int[] nums, int target)
@@ -74,7 +76,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
                     {
                         left = mid + 1;
                     }
-
                 }
                 //second half is strictly increasing
                 else
@@ -92,6 +93,5 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
         }
 
         #endregion
-
     }
 }
