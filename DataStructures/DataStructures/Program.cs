@@ -9,8 +9,6 @@ namespace DataStructures
     {
         private static void Main()
         {
-            LongestCommonSubSequence.Init();
-
             //Incomplete
             ValidateBinarySearchTree.Init();
 
