@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DataStructures.ProblemSolving.LeetCode.Problems.Models;
+﻿using DataStructures.ProblemSolving.LeetCode.Problems.Models;
+using System;
 
 namespace DataStructures.ProblemSolving.LeetCode.Problems
 {
@@ -23,13 +21,13 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
                     },
                     right = new TreeNode(1)
                     {
-                        right = new TreeNode(0),
-                        left = new TreeNode(0)
+                        right = new TreeNode(),
+                        left = new TreeNode()
                     }
                 },
-                right = new TreeNode(0)
+                right = new TreeNode()
                 {
-                    left = new TreeNode(0)
+                    left = new TreeNode()
                 }
             };
 
