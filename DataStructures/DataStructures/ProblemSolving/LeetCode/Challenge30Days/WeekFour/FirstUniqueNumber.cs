@@ -12,20 +12,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
 
     public class FirstUniqueNumber
     {
-        public static void Init()
-        {
-            var obj = new FirstUniqueNumber(new int[] { 2, 3, 5 });
-            var s1 = obj.ShowFirstUnique();
-            obj.Add(5);
-            var s2 = obj.ShowFirstUnique();
-            obj.Add(2);
-            var s3 = obj.ShowFirstUnique();
-            obj.Add(3);
-            var s4 = obj.ShowFirstUnique();
-        }
+        private readonly Dictionary<int, int> _dictionary;
 
         private readonly Queue<int> _queue;
-        private readonly Dictionary<int, int> _dictionary;
 
         //Time complexity: O(N)
         public FirstUniqueNumber(int[] nums)
@@ -41,9 +30,21 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
                 {
                     _dictionary.Add(eachNum, 1);
                 }
+
                 _queue.Enqueue(eachNum);
             }
+        }
 
+        public static void Init()
+        {
+            var obj = new FirstUniqueNumber(new int[] {2, 3, 5});
+            var s1 = obj.ShowFirstUnique();
+            obj.Add(5);
+            var s2 = obj.ShowFirstUnique();
+            obj.Add(2);
+            var s3 = obj.ShowFirstUnique();
+            obj.Add(3);
+            var s4 = obj.ShowFirstUnique();
         }
 
         //Time complexity: O(max(Q,N)) Q : no of elements skipped
@@ -76,5 +77,4 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
             }
         }
     }
-
 }

@@ -31,7 +31,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekThree
             var s = new Stack<TreeNode>();
             // Push root 
             s.Push(root);
-            // Iterate through rest of the size-1 items of given preorder array 
+
             for (var i = 1; i < size; ++i)
             {
                 TreeNode temp = null;

@@ -1,5 +1,5 @@
-﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive.Models;
-using System;
+﻿using System;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive
 {
@@ -12,6 +12,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive
 
     public class MaxPathSum
     {
+        //Max Sum of the tree
+        private static int _maxSum;
+
         public static void Init()
         {
             var tree1 = new TreeNode(-2)
@@ -28,9 +31,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive
             tree2.left = new TreeNode(-1);
             Console.WriteLine(FindMaxPathSum(tree2));
         }
-
-        //Max Sum of the tree
-        private static int _maxSum;
 
         private static int FindMaxPathSum(TreeNode root)
         {

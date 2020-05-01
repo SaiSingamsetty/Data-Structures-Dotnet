@@ -9,7 +9,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
     {
         public static void Init()
         {
-            char[][] arr = {
+            char[][] arr =
+            {
                 new[] {'0', '1', '1', '0', '1'},
                 new[] {'1', '1', '1', '0', '0'},
                 new[] {'1', '1', '1', '1', '0'},
@@ -55,6 +56,5 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
         }
 
         #endregion
-
     }
 }

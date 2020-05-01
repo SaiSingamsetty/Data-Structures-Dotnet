@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
 {
@@ -21,7 +19,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFour
     {
         public static void Init()
         {
-            var arr = new[] { 0, 1 };
+            var arr = new[] {0, 1};
             Console.WriteLine(CanJumpThrough(arr));
         }
 

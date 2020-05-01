@@ -1,5 +1,5 @@
-﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive.Models;
-using System;
+﻿using System;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive
 {
@@ -34,7 +34,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive
                     left = new TreeNode(0)
                 }
             };
-            Console.WriteLine(IsValidSeq(tree, new[] { 0, 1, 1 }));
+            Console.WriteLine(IsValidSeq(tree, new[] {0, 1, 1}));
         }
 
         //Ref: https://gist.github.com/chetanbommu/6b1c57710f76074441339bf42fc46772

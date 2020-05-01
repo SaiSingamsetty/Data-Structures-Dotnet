@@ -1,5 +1,5 @@
-﻿using DataStructures.ProblemSolving.LeetCode.Problems.Models;
-using System;
+﻿using System;
+using DataStructures.ProblemSolving.LeetCode.Problems.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.Problems
 {

@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive.Models
+﻿namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive.Models
 {
     public class TreeNode
     {
-        public int val;
         public TreeNode left;
         public TreeNode right;
+        public int val;
+
         public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
         {
             this.val = val;
@@ -16,5 +13,4 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.WeekFive.Models
             this.right = right;
         }
     }
-
 }
