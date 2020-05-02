@@ -1,5 +1,5 @@
 ﻿using System;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
+using DataStructures.ProblemSolving.LeetCode.Problems;
 
 namespace DataStructures
 {
