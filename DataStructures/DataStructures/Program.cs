@@ -1,7 +1,6 @@
-﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
+﻿using System;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
-using System;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo;
 
 namespace DataStructures
 {
@@ -9,11 +8,8 @@ namespace DataStructures
     {
         private static void Main()
         {
-            //TODAY'S LEETCODE: NOT YET
-            PerfectSquare.Init();
-
-            //Refactor
-            ImplementStrStrLc28.Init();
+            //Complete
+            ClimbingStairsLc70.Init();
 
             //Refactor
             NumberComplement.Init();
@@ -25,6 +21,7 @@ namespace DataStructures
 
         private static void Todo()
         {
+            //TODO: KMP Algo for ImplementStrStrLc28
             //TODO: Lending Cart in Whats-app group
             //TODO: https://leetcode.com/problems/daily-temperatures/
 

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 
 namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
 {
@@ -16,7 +15,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
 
         private static int FindDiff(int num)
         {
-            var arr = num.ToString().ToCharArray().Select(x => (int)x - '0').ToArray();
+            var arr = num.ToString().ToCharArray().Select(x => (int) x - '0').ToArray();
 
             //first get max no
             var maxNum = num;
@@ -29,6 +28,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
                 maxNum = int.Parse(num.ToString().Replace($"{target}", "9"));
                 break;
             }
+
             //min
             for (int i = 0; i < arr.Length; i++)
             {

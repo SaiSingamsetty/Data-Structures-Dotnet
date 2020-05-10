@@ -24,7 +24,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
                 var mid = start + (end - start) / 2; //Overflow handling
 
                 if (IsBadVersion(mid))
-                    end = mid;  //If the mid one is bad, then first bad version will be definitely 'before' or 'equal' to mid
+                    end = mid; //If the mid one is bad, then first bad version will be definitely 'before' or 'equal' to mid
                 else
                 {
                     start = mid + 1; // If the mid one is good, then first bad version will be 'after' mid
@@ -42,6 +42,5 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
         }
 
         #endregion
-
     }
 }

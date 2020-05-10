@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
 {
@@ -11,7 +9,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
     {
         public static void Init()
         {
-            var res = Find(new int[] { 8, 2, 4, 7 }, 4);
+            var res = Find(new int[] {8, 2, 4, 7}, 4);
         }
 
         private static int Find(int[] nums, int limit)
@@ -23,7 +21,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
             for (var i = 0; i < nums.Length; i++)
             {
                 sumTillNow -= nums[i];
-                var abs =  Math.Abs(sumTillNow);
+                var abs = Math.Abs(sumTillNow);
 
                 if (abs > limit)
                 {
@@ -31,6 +29,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
                     pointer++;
                     continue;
                 }
+
                 if (pointer == i)
                 {
                     sumTillNow = Math.Abs(sumTillNow);

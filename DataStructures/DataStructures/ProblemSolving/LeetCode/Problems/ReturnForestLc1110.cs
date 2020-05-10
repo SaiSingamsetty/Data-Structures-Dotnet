@@ -23,7 +23,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
             tree.right.left = new TreeNode(6);
             tree.right.right = new TreeNode(7);
 
-            var res = ReturnForest(tree, new[] { 3, 5 });
+            var res = ReturnForest(tree, new[] {3, 5});
         }
 
         #region Approach 1 Recursion (Multiple Visits to a node)
@@ -57,6 +57,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
                     counter++;
                     node.left = null;
                 }
+
                 if (node.right != null)
                 {
                     forest.Add(node.right);
@@ -106,8 +107,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
             return deleted ? null : node;
         }
 
-
         #endregion
-
     }
 }

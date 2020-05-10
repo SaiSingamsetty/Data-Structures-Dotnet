@@ -12,7 +12,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
     {
         public static void Init()
         {
-            Console.WriteLine(FindMajorityElementUsingBmAlgo(new[] { 2, 2, 1, 1, 1, 2, 2}));
+            Console.WriteLine(FindMajorityElementUsingBmAlgo(new[] {2, 2, 1, 1, 1, 2, 2}));
         }
 
         #region Approach 1 : Using Dictionary TC: O(n), SC: O(n) 
@@ -37,7 +37,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
                     if (dict[eachNum] > threshold)
                         return eachNum;
                 }
-
             }
 
             return -1;
@@ -71,7 +70,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
             }
 
             return count > nums.Length / 2 ? candidate : int.MinValue;
-
         }
 
         #endregion

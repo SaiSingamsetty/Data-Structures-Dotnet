@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
@@ -27,7 +25,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
                 "C",
                 "A"
             };
-            var res = FindDestCity(new List<IList<string>> { path1, path2, path3 });
+            var res = FindDestCity(new List<IList<string>> {path1, path2, path3});
         }
 
         private static string FindDestCity(IList<IList<string>> paths)
@@ -35,7 +33,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
             var startCities = new List<string>();
             var destCities = new List<string>();
 
-            foreach(var eachPath in paths)
+            foreach (var eachPath in paths)
             {
                 startCities.Add(eachPath[0]);
                 destCities.Add(eachPath[1]);

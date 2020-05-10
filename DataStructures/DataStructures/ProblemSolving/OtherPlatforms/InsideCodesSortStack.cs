@@ -38,19 +38,17 @@ namespace DataStructures.ProblemSolving.OtherPlatforms
                     {
                         stack.Push(tempStack.Pop());
                     }
+
                     tempStack.Push(temp);
                 }
-
             }
 
-            while (tempStack.Count!=0)
+            while (tempStack.Count != 0)
             {
                 stack.Push(tempStack.Pop());
             }
-
         }
 
         //little more optimized code is available at the top link pasted
-
     }
 }

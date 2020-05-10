@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
@@ -12,7 +10,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
     {
         public static void Init()
         {
-            var arr = new int[] { 1, 0, 0 };
+            var arr = new int[] {1, 0, 0};
             var res = FindIfKPlacesAway(arr, 1);
         }
 
@@ -31,7 +29,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
                         prevOne = i + 1;
                     }
                     else
-                    {                      
+                    {
                         listOfIndices.Add(i + 1 - prevOne);
                         prevOne = i + 1;
                     }

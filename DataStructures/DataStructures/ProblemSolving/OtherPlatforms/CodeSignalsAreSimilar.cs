@@ -17,8 +17,8 @@ namespace DataStructures.ProblemSolving.OtherPlatforms
     {
         public static void Init()
         {
-            var a = new[] { 1, 2, 3, 4, 5 };
-            var b = new[] { 1, 2, 5, 4, 3 };
+            var a = new[] {1, 2, 3, 4, 5};
+            var b = new[] {1, 2, 5, 4, 3};
 
             Console.WriteLine(Check(a, b));
         }

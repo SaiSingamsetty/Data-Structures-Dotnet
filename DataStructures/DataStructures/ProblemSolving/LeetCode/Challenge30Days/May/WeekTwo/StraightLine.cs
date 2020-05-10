@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
 {
@@ -36,8 +34,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
             for (int i = 1; i < coordinatesCount; i++)
             {
                 var tempXy = coordinates[i];
-                var tempSlope = (decimal)(tempXy[0] - prevXy[0]) != 0
-                    ? (tempXy[1] - prevXy[1]) / (decimal)(tempXy[0] - prevXy[0])
+                var tempSlope = (decimal) (tempXy[0] - prevXy[0]) != 0
+                    ? (tempXy[1] - prevXy[1]) / (decimal) (tempXy[0] - prevXy[0])
                     : int.MaxValue; //handling divide by 0 case (Max slope Infinite -> int.MaxValue)
 
                 if (slope == int.MinValue)
@@ -69,7 +67,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
 
             return true;
         }
-
 
         #endregion
     }

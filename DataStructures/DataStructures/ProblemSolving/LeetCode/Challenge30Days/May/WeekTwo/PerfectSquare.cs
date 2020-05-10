@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
+﻿namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
 {
     public class PerfectSquare
     {
@@ -22,6 +18,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
                 num -= i;
                 i += 2;
             }
+
             return num == 0;
         }
 
@@ -43,11 +40,10 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
                 if (mid * mid > num) max = mid - 1;
                 else min = mid + 1;
             }
-            return false;
 
+            return false;
         }
 
         #endregion
-
     }
 }

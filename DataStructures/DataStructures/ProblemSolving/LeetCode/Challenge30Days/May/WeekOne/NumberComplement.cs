@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
 {
@@ -23,8 +21,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
                 i += 1;
                 num >>= 1;
             }
-            return result;
 
+            return result;
         }
     }
 }

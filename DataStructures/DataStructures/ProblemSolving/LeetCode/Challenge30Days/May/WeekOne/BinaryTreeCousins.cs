@@ -1,6 +1,6 @@
-﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
 {
@@ -70,7 +70,5 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
         }
 
         #endregion
-
-
     }
 }

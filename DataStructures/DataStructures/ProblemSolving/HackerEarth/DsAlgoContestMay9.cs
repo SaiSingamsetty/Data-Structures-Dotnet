@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.HackerEarth
 {
@@ -37,11 +36,7 @@ namespace DataStructures.ProblemSolving.HackerEarth
             {
                 var zeroCount = eachInput[0];
                 var oneCount = eachInput[1];
-
-
-
             }
-
         }
 
         private static List<string> GenerateBinaryStrings(int zeroCount, int oneCount)
@@ -49,20 +44,17 @@ namespace DataStructures.ProblemSolving.HackerEarth
             var list = new List<string>();
             while (zeroCount > 0 || oneCount > 0)
             {
-
-                
             }
 
             return list;
         }
 
 
-
         private static void RosesInShop()
         {
             var count = Convert.ToInt32(Console.ReadLine());
             var temp = Console.ReadLine();
-            if(string.IsNullOrEmpty(temp))
+            if (string.IsNullOrEmpty(temp))
                 return;
 
             var smells = temp.Split(' ').Select(int.Parse).ToList();
@@ -83,7 +75,7 @@ namespace DataStructures.ProblemSolving.HackerEarth
                 else
                 {
                     valley++;
-                    if(smells[i] < beforePrev || valley > 2)
+                    if (smells[i] < beforePrev || valley > 2)
                         Console.WriteLine(max);
                     if (smells[i] > beforePrev)
                     {
@@ -93,6 +85,7 @@ namespace DataStructures.ProblemSolving.HackerEarth
                     }
                 }
             }
+
             Console.WriteLine(max);
         }
     }
