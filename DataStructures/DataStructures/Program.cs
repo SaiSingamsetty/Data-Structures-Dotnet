@@ -1,7 +1,6 @@
-﻿using System;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
+﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
+using System;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo;
-using DataStructures.ProblemSolving.LeetCode.Problems;
 
 namespace DataStructures
 {
@@ -9,6 +8,9 @@ namespace DataStructures
     {
         private static void Main()
         {
+            //Refactor
+            RemoveKDigits.Init();
+
             //TODO: KMP Algo for ImplementStrStrLc28
             //TODO: https://leetcode.com/problems/daily-temperatures/
             //TODO: Lending Cart in Whats-app group
