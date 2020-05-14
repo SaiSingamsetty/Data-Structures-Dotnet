@@ -15,38 +15,101 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
     {
         public static void Init()
         {
-            var res1 = Remove("1432219", 3);
+            var res1 = RemoveDigitsApproach2("1432219", 3);
+            var res2 = RemoveDigitsApproach1("100200", 2);
+            var res3 = RemoveDigitsApproach2("123", 2);
         }
 
-        private static string Remove(string num, int k)
+        #region Approach 1: Using Stack (TC: O(N) for iterating through all elements, SC: O(N) for using stack)
+
+        private static string RemoveDigitsApproach1(string num, int k)
         {
-            var n = num.Length;
             var stack = new Stack<char>();
+
             foreach (var eachChar in num)
             {
-                while (stack.Count != 0 && k > 0 && stack.Peek() > eachChar)
-                { stack.Pop(); k -= 1; }
+                while (stack.Count != 0 && k > 0 && eachChar < stack.Peek())
+                {
+                    stack.Pop();
+                    k--;
+                }
 
-                if (stack.Count != 0 || eachChar != '0')
-                    stack.Push(eachChar);
+                if (stack.Count == 0 && eachChar == '0') //No need to add 0's when the stack is empty as it just leading 0's
+                    continue;
+
+                stack.Push(eachChar);
             }
 
-            //Now remove the largest values from the top of the stack
-            while (stack.Count != 0 && k-- > 0)
+            /*
+            * Now remove the largest values from the top of the stack
+            * If the num is 123 and the stack will be filled with all digits by end of above loop
+            * So we should remove if stack is not empty and k value is still greater than 0
+           */
+            while (stack.Count > 0 && k > 0)
+            {
                 stack.Pop();
+                k--;
+            }
             if (stack.Count == 0)
                 return "0";
-            
-            //Now retrieve the number from stack into a string (reusing num)
-            var temp = string.Empty;
-            while (stack.Count != 0)
-            {
-                temp =  stack.Peek() + temp;
-                stack.Pop();
-            }
-            return temp;
 
+            var temp = string.Empty;
+            while (stack.Count > 0)
+            {
+                temp = stack.Pop() + temp;
+            }
+
+            return temp;
         }
+
+        #endregion
+
+        #region Approach 2: Using Stack, String Builder (faster)
+
+        private static string RemoveDigitsApproach2(string num, int k)
+        {
+            var stack = new Stack<char>();
+
+            foreach (var eachChar in num)
+            {
+                while (stack.Count != 0 && k > 0 && eachChar < stack.Peek())
+                {
+                    stack.Pop();
+                    k--;
+                }
+
+                if (stack.Count == 0 && eachChar == '0') //No need to add 0's when the stack is empty as it just leading 0's
+                    continue;
+
+                stack.Push(eachChar);
+            }
+
+            /*
+             * Now remove the largest values from the top of the stack
+             * If the num is 123 and the stack will be filled with all digits by end of above loop
+             * So we should remove if stack is not empty and k value is still greater than 0
+            */
+            while (stack.Count > 0 && k > 0)
+            {
+                stack.Pop();
+                k--;
+            }
+            if (stack.Count == 0)
+                return "0";
+
+            var sb = new StringBuilder();
+            while (stack.Count > 0)
+            {
+                sb.Append(stack.Pop());
+            }
+
+            var charArray = sb.ToString().ToCharArray();
+            Array.Reverse(charArray);
+
+            return new string(charArray);
+        }
+
+        #endregion
 
     }
 }
