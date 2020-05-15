@@ -1,6 +1,6 @@
 ﻿namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
 {
-    // Leetcode C12: https://leetcode.com/explore/featured/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3327/
+    // Challenge 12: https://leetcode.com/explore/featured/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3327/
     // You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once. Find this single element that appears only once.
     // Input: [1,1,2,3,3,4,4,8,8]
     // Output: 2
@@ -10,9 +10,9 @@
     {
         public static void Init()
         {
-            var res1 = SingleNonDuplicateApproach3(new[] { 1, 1, 2, 2, 3, 3, 4, 5, 5 });
-            var res2 = SingleNonDuplicate(new[] { 1 });
-            var res3 = SingleNonDuplicate(new[] { 1, 1, 2 });
+            var res1 = SingleNonDuplicateApproach3(new[] {1, 1, 2, 2, 3, 3, 4, 5, 5});
+            var res2 = SingleNonDuplicate(new[] {1});
+            var res3 = SingleNonDuplicate(new[] {1, 1, 2});
         }
 
         #region Approach 1: Counter And Pointer Approach TC: O(M) where M can be less or equal to N, SC: O(1)
@@ -37,7 +37,6 @@
                     counter = 1;
                     pointer = num;
                 }
-
             }
 
             return pointer;
@@ -75,6 +74,7 @@
                 if (nums[mid + 1] == nums[mid]) low = mid + 2;
                 else high = mid;
             }
+
             return nums[low];
         }
 
@@ -91,9 +91,9 @@
                     return nums[i];
                 }
             }
+
             return nums[nums.Length - 1];
         }
-
 
         #endregion
     }

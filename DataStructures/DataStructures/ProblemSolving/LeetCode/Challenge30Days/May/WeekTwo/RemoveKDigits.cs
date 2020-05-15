@@ -4,8 +4,7 @@ using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
 {
-    // Leetcode: https://leetcode.com/explore/featured/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3328/
-    // Day13
+    // Challenge 13: https://leetcode.com/explore/featured/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3328/
     // Given a non-negative integer num represented as a string, remove k digits from the number so that the new number is the smallest possible.
     // Note:
     // The length of num is less than 10002 and will be ≥ k.
@@ -34,7 +33,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
                     k--;
                 }
 
-                if (stack.Count == 0 && eachChar == '0') //No need to add 0's when the stack is empty as it just leading 0's
+                if (stack.Count == 0 && eachChar == '0'
+                ) //No need to add 0's when the stack is empty as it just leading 0's
                     continue;
 
                 stack.Push(eachChar);
@@ -50,6 +50,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
                 stack.Pop();
                 k--;
             }
+
             if (stack.Count == 0)
                 return "0";
 
@@ -78,7 +79,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
                     k--;
                 }
 
-                if (stack.Count == 0 && eachChar == '0') //No need to add 0's when the stack is empty as it just leading 0's
+                if (stack.Count == 0 && eachChar == '0'
+                ) //No need to add 0's when the stack is empty as it just leading 0's
                     continue;
 
                 stack.Push(eachChar);
@@ -94,6 +96,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
                 stack.Pop();
                 k--;
             }
+
             if (stack.Count == 0)
                 return "0";
 
@@ -110,6 +113,5 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
         }
 
         #endregion
-
     }
 }

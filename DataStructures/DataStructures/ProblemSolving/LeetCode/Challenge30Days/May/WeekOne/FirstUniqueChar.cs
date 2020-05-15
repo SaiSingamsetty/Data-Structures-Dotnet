@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
 {
-    //Challenge5 https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/
+    // Challenge5 https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/
     // Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
-    //s = "leetcode"
+    // s = "leetcode"
     // return 0. 
     // s = "loveleetcode",
     // return 2.
