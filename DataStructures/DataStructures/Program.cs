@@ -8,8 +8,6 @@ namespace DataStructures
     {
         private static void Main()
         {
-            CircularSubArray.Init();
-
             //TODO: KMP Algo for ImplementStrStrLc28
             //TODO: https://leetcode.com/problems/daily-temperatures/
             //TODO: Lending Cart in Whats-app group

@@ -1,4 +1,7 @@
-﻿namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
+﻿using System;
+using System.Linq;
+
+namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
 {
     // Challenge 15: https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/536/week-3-may-15th-may-21st/3330/
     // Given a circular array C of integers represented by A, find the maximum possible sum of a non-empty sub array of C.
@@ -32,12 +35,44 @@
     {
         public static void Init()
         {
-            var res1 = MaxSubArraySumCircular(new[] {1, -2, 3, -2});
+            var res1 = MaxSubArraySumCircular(new[] { 1, -2, 3, -2 }); //3
+            var res2 = MaxSubArraySumCircular(new[] {5, -3, 5}); //10
+            var res3 = MaxSubArraySumCircular(new[] {3, -1, 2, -1}); //4
+            var res4 = MaxSubArraySumCircular(new[] { 3, -2, 2, -3 }); //3
+            var res5 = MaxSubArraySumCircular(new[] { -2, -3, -1 }); //-1
+
         }
+
+        //Ref: https://www.youtube.com/watch?v=kssIQAIg9c8
 
         private static int MaxSubArraySumCircular(int[] A)
         {
-            return 1;
+            var maxSumUsingKadanesForFixedArray = FindSubArrayMaxSumUsingKadanesAlgo(A);
+
+            var totalSum = A.Sum();
+            var invertedArray = A.Select(x => -x).ToArray();
+            var kadanesMaxSumForInvertedArray = FindSubArrayMaxSumUsingKadanesAlgo(invertedArray);
+            var maxSumForCircularArray = totalSum + kadanesMaxSumForInvertedArray;
+
+            if (maxSumForCircularArray > maxSumUsingKadanesForFixedArray && maxSumForCircularArray != 0)
+                return maxSumForCircularArray;
+
+            return maxSumUsingKadanesForFixedArray;
+        }
+
+        private static int FindSubArrayMaxSumUsingKadanesAlgo(int[] nums)
+        {
+            var maxSoFar = nums[0];
+            var curMax = nums[0];
+            var size = nums.Length;
+
+            for (var i = 1; i < size; i++)
+            {
+                curMax = Math.Max(nums[i], curMax + nums[i]);
+                maxSoFar = Math.Max(maxSoFar, curMax);
+            }
+
+            return maxSoFar;
         }
     }
 }
