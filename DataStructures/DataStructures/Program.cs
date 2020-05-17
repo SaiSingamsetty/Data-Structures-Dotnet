@@ -1,6 +1,7 @@
 ﻿using System;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree;
+using DataStructures.ProblemSolving.LeetCode.Problems;
+using DataStructures.ProblemSolving.LeetCode.Contest.May16;
 
 namespace DataStructures
 {
@@ -9,6 +10,7 @@ namespace DataStructures
         private static void Main()
         {
             //TODO: KMP Algo for ImplementStrStrLc28
+            ImplementStrStrLc28.Init();
             //TODO: https://leetcode.com/problems/daily-temperatures/
             //TODO: Lending Cart in Whats-app group
             //TODO: https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/
