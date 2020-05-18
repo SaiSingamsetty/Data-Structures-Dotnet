@@ -35,12 +35,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
     {
         public static void Init()
         {
-            var res1 = MaxSubArraySumCircular(new[] { 1, -2, 3, -2 }); //3
+            var res1 = MaxSubArraySumCircular(new[] {1, -2, 3, -2}); //3
             var res2 = MaxSubArraySumCircular(new[] {5, -3, 5}); //10
             var res3 = MaxSubArraySumCircular(new[] {3, -1, 2, -1}); //4
-            var res4 = MaxSubArraySumCircular(new[] { 3, -2, 2, -3 }); //3
-            var res5 = MaxSubArraySumCircular(new[] { -2, -3, -1 }); //-1
-
+            var res4 = MaxSubArraySumCircular(new[] {3, -2, 2, -3}); //3
+            var res5 = MaxSubArraySumCircular(new[] {-2, -3, -1}); //-1
         }
 
         //Ref: https://www.youtube.com/watch?v=kssIQAIg9c8

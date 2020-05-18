@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using DataStructures.ProblemSolving.LeetCode.Contest.May16.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
@@ -24,6 +22,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
 
     public class GoodNodes
     {
+        private static int Counter;
+
         public static void Init()
         {
             var root1 = new TreeNode(3);
@@ -40,8 +40,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
             var res1 = FindNoOfGoodNodes(root1);
         }
 
-        private static int Counter;
-
         private static int FindNoOfGoodNodes(TreeNode root)
         {
             if (root == null)
@@ -54,7 +52,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
             return Counter;
         }
 
-        
 
         private static void RecursionHelper(TreeNode node, int max)
         {
@@ -69,7 +66,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
             {
                 RecursionHelper(node.left, tempMax);
             }
-            if(node.right != null)
+
+            if (node.right != null)
             {
                 RecursionHelper(node.right, tempMax);
             }

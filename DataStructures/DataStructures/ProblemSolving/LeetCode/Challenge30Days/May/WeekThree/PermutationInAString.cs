@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
 {
@@ -59,7 +56,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
                 s2Hash[s2[start] - 'a']--;
 
                 start++;
-
             }
 
             return false;

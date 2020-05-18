@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
+﻿namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
 {
     // Leetcode 1446 : https://leetcode.com/problems/consecutive-characters/
     // Given a string s, the power of the string is the maximum length of a non-empty substring that contains only one unique character.
@@ -34,7 +30,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
             var maxPowerTillNow = 1;
             var counter = 1;
 
-            for(var i = 1; i < s.Length; i++)
+            for (var i = 1; i < s.Length; i++)
             {
                 if (s[i] == s[i - 1])
                 {

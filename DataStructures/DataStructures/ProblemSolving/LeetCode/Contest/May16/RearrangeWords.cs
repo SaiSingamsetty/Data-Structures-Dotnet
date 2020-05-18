@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
@@ -24,6 +23,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
             {
                 lookUp.Add(i, stringInputArray[i].Length);
             }
+
             var orderByLength = lookUp.OrderBy(x => x.Value);
 
             var outputString = string.Empty;
@@ -32,7 +32,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
             {
                 var newIndex = orderByLength.ToList()[i].Key;
                 if (i == 0)
-                    outputString += char.ToUpper(stringInputArray[newIndex][0]) + stringInputArray[newIndex].Substring(1) + " ";
+                    outputString += char.ToUpper(stringInputArray[newIndex][0]) +
+                                    stringInputArray[newIndex].Substring(1) + " ";
                 else
                 {
                     outputString += stringInputArray[newIndex].ToLower() + " ";
@@ -55,6 +56,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
                 {
                     tempStack.Push(stack.Pop().ToLower());
                 }
+
                 stack.Push(stringInputArray[i].ToLower());
 
                 while (tempStack.Count != 0)

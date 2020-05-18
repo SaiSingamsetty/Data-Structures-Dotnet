@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
 {
@@ -59,7 +57,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
             {
                 var tempLookUp = new Dictionary<char, int>();
 
-                for (var j = 0; ; j++)
+                for (var j = 0;; j++)
                 {
                     if (j == p.Length)
                     {
@@ -69,6 +67,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
                             if (actualLookUp[eachChar] == freq)
                                 counter++;
                         }
+
                         if (counter == actualLookUp.Keys.Count)
                         {
                             list.Add(i);
@@ -91,7 +90,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
                         }
                     }
                 }
-
             }
 
             return list;
@@ -100,7 +98,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
         #endregion
 
         #region Approach 2 : Sliding Window logic
-        
+
         private static IList<int> ExecuteApproach2(string s, string p)
         {
             var output = new List<int>();
@@ -127,7 +125,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
             while (end < lengthOfString)
             {
                 /* arr1.SequenceEqual(arr2) is also linq built-in function to verify */
-                if(CompareArraysHelper(pLookUp, sLookUp))
+                if (CompareArraysHelper(pLookUp, sLookUp))
                     output.Add(start);
                 end++;
                 if (end != lengthOfString)
@@ -151,7 +149,5 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
         }
 
         #endregion
-
-        
     }
 }

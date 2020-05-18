@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
+﻿namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
 {
     public class BusyStudent
     {
         public static void Init()
         {
-            var res1 = Execute(new int[] { 1, 2, 3 }, new int[] { 3, 2, 7 }, 4);
+            var res1 = Execute(new int[] {1, 2, 3}, new int[] {3, 2, 7}, 4);
         }
 
         private static int Execute(int[] startTime, int[] endTime, int queryTime)
