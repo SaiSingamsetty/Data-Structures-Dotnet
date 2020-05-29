@@ -2,6 +2,7 @@
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree;
 using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour;
 
 namespace DataStructures
 {
@@ -19,6 +20,7 @@ namespace DataStructures
 
         private static void Refactor()
         {
+            PossibleBiPartition.Init(); // Not solved
             StockSpan.Init(); // Not solved
             ImplementStrStrLc28.Init(); // KMP Algo for ImplementStrStrLc28
             NumberComplement.Init(); // Refactor existing implementation
