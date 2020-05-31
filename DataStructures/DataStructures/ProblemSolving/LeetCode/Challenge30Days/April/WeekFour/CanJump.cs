@@ -19,11 +19,16 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
     {
         public static void Init()
         {
-            var arr = new[] {0, 1};
-            Console.WriteLine(CanJumpThrough(arr));
+            var input1 = new[] {0, 1};
+            var res1 = CanJumpThrough(input1);
+
+            var input2 = new[] {2, 3, 1, 1, 4};
+            var res2 = CanJumpThrough(input2);
         }
 
-        //https://www.youtube.com/watch?v=muDPTDrpS28
+        // https://www.youtube.com/watch?v=muDPTDrpS28
+        // Peak and Valley approach
+        // For every point check the maximum reach-ability.
 
         private static bool CanJumpThrough(int[] nums)
         {
@@ -31,6 +36,10 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
 
             for (var i = 0; i < nums.Length; i++)
             {
+                // If the pointer crosses the max reachable index (for every point till now ) return false
+                // For ex, Max reachable index is 6, the pointer is at 7 now
+                // the pointer is at such a position where we cant jump from any 
+                // index in the array to the current pointer (7), So return false.
                 if (i > reachable)
                     return false;
 
