@@ -3,6 +3,7 @@ using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne;
 
 namespace DataStructures
 {
@@ -12,6 +13,7 @@ namespace DataStructures
         {
             /* Current Problem */
 
+
             /* To-Do's and Refactorings */
             Todo();
             Refactor();
@@ -20,6 +22,7 @@ namespace DataStructures
 
         private static void Refactor()
         {
+            MinEditDistance.Init(); // Not Solved
             CourseSchedule.Init(); // Not solved - GRAPHS
             PossibleBiPartition.Init(); // Not solved - GRAPHS
             ImplementStrStrLc28.Init(); // KMP Algo for ImplementStrStrLc28
