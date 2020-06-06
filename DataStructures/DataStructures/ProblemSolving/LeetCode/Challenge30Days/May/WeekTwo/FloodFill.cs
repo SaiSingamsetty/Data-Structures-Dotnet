@@ -51,10 +51,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
         {
             foreach (var eachRow in image)
             {
-                for (var j = 0; j < image[0].Length; j++)
-                {
-                    Console.Write(eachRow[j] + " ");
-                }
+                for (var j = 0; j < image[0].Length; j++) Console.Write(eachRow[j] + " ");
 
                 Console.WriteLine("\n");
             }

@@ -30,7 +30,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
             }
 
             //min
-            for (int i = 0; i < arr.Length; i++)
+            for (var i = 0; i < arr.Length; i++)
             {
                 if (arr[i] == 1)
                     continue;

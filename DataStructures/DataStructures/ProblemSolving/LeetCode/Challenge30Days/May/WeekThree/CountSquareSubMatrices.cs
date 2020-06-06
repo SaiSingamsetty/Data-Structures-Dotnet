@@ -22,9 +22,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
         public static void Init()
         {
             var matrix1 = new int[3][];
-            matrix1[0] = new[] { 1, 0, 1 };
-            matrix1[1] = new[] { 1, 1, 0 };
-            matrix1[2] = new[] { 1, 1, 0 };
+            matrix1[0] = new[] {1, 0, 1};
+            matrix1[1] = new[] {1, 1, 0};
+            matrix1[2] = new[] {1, 1, 0};
 
             var res1 = Count(matrix1);
         }
@@ -43,24 +43,21 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
             var squareCounter = 0;
 
             for (var i = 0; i < rowCount; i++)
-            {
-                for (var j = 0; j < colCount; j++)
+            for (var j = 0; j < colCount; j++)
+                if (i == 0 || j == 0)
                 {
-                    if (i == 0 || j == 0)
-                    {
-                        copyMatrix[i, j] = matrix[i][j];
-                        squareCounter += copyMatrix[i, j];
-                    }
-                    else
-                    {
-                        if (matrix[i][j] == 0)
-                            continue;
-
-                        copyMatrix[i, j] = 1 + Math.Min(copyMatrix[i - 1, j - 1], Math.Min(copyMatrix[i - 1, j], copyMatrix[i, j - 1]));
-                        squareCounter += copyMatrix[i, j];
-                    }
+                    copyMatrix[i, j] = matrix[i][j];
+                    squareCounter += copyMatrix[i, j];
                 }
-            }
+                else
+                {
+                    if (matrix[i][j] == 0)
+                        continue;
+
+                    copyMatrix[i, j] = 1 + Math.Min(copyMatrix[i - 1, j - 1],
+                                           Math.Min(copyMatrix[i - 1, j], copyMatrix[i, j - 1]));
+                    squareCounter += copyMatrix[i, j];
+                }
 
             return squareCounter;
         }

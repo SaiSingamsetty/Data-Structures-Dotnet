@@ -31,7 +31,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekTwo
 
         private static string Shift(string s, int[][] shift)
         {
-            var totalShift = shift.Sum(i => (i[0] == 0 ? -1 * i[1] : i[1])) % s.Length;
+            var totalShift = shift.Sum(i => i[0] == 0 ? -1 * i[1] : i[1]) % s.Length;
             if (totalShift == 0)
                 return s;
 

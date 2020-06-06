@@ -72,30 +72,21 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekTwo
 
         public void Pop()
         {
-            if (_topStackObject == null)
-            {
-                return;
-            }
+            if (_topStackObject == null) return;
 
             _topStackObject = _topStackObject.Next;
         }
 
         public int Top()
         {
-            if (_topStackObject == null)
-            {
-                return int.MaxValue;
-            }
+            if (_topStackObject == null) return int.MaxValue;
 
             return _topStackObject.Value;
         }
 
         public int GetMin()
         {
-            if (_topStackObject == null)
-            {
-                return int.MaxValue;
-            }
+            if (_topStackObject == null) return int.MaxValue;
 
             return _topStackObject.MinValue;
         }

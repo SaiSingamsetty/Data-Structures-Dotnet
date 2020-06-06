@@ -22,12 +22,10 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
             var equalCounter = 0;
 
             for (var i = 0; i < arr1.Length; i++)
-            {
                 if (arr1[i] > arr2[i])
                     counter++;
                 else if (arr1[i] == arr2[i])
                     equalCounter++;
-            }
 
             if (counter == arr1.Length || counter + equalCounter == arr1.Length)
                 return true;

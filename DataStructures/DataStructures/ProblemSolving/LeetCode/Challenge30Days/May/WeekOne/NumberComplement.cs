@@ -24,8 +24,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
 
         private static int FindComplement(int num)
         {
-            int result = 0;
-            int i = 0;
+            var result = 0;
+            var i = 0;
             while (num > 0)
             {
                 if ((num & 1) == 0)

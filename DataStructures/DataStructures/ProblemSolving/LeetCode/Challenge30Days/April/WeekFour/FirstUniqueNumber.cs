@@ -27,9 +27,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
                 if (_dictionary.ContainsKey(eachNum))
                     _dictionary[eachNum]++;
                 else
-                {
                     _dictionary.Add(eachNum, 1);
-                }
 
                 _queue.Enqueue(eachNum);
             }
@@ -37,7 +35,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
 
         public static void Init()
         {
-            var obj = new FirstUniqueNumber(new int[] {2, 3, 5});
+            var obj = new FirstUniqueNumber(new[] {2, 3, 5});
             var s1 = obj.ShowFirstUnique();
             obj.Add(5);
             var s2 = obj.ShowFirstUnique();

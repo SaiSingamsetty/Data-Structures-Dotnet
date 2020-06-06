@@ -65,10 +65,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
                     node.right = null;
                 }
 
-                if (counter == 2)
-                {
-                    return null;
-                }
+                if (counter == 2) return null;
 
                 return null;
             }
@@ -88,10 +85,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
             _lookUp = new HashSet<int>();
             _listOfTrees = new List<TreeNode>();
 
-            foreach (var i in to_delete)
-            {
-                _lookUp.Add(i);
-            }
+            foreach (var i in to_delete) _lookUp.Add(i);
 
             Helper(root, true);
             return _listOfTrees;

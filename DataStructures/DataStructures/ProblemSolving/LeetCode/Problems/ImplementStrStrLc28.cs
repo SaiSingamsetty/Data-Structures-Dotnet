@@ -68,13 +68,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
         private static int ImplStrUsingApproach2(string haystack, string needle)
         {
             for (var i = 0;; i++)
+            for (var j = 0;; j++)
             {
-                for (var j = 0;; j++)
-                {
-                    if (j == needle.Length) return i;
-                    if (i + j == haystack.Length) return -1;
-                    if (needle[j] != haystack[i + j]) break;
-                }
+                if (j == needle.Length) return i;
+                if (i + j == haystack.Length) return -1;
+                if (needle[j] != haystack[i + j]) break;
             }
         }
 

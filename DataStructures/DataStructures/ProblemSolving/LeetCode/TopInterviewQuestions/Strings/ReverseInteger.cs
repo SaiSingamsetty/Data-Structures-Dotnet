@@ -20,8 +20,8 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
                 x /= 10;
 
                 //validate int range
-                if (sum > int.MaxValue / 10 || (sum == int.MaxValue / 10 && pop > 7)) return 0;
-                if (sum < int.MinValue / 10 || (sum == int.MinValue / 10 && pop < -8)) return 0;
+                if (sum > int.MaxValue / 10 || sum == int.MaxValue / 10 && pop > 7) return 0;
+                if (sum < int.MinValue / 10 || sum == int.MinValue / 10 && pop < -8) return 0;
 
                 sum = sum * 10 + pop;
             }

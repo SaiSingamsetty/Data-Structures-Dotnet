@@ -37,10 +37,8 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
             Array.Sort(nums);
 
             for (var i = 0; i + 1 < nums.Length; i++)
-            {
                 if (nums[i] == nums[i + 1])
                     return true;
-            }
 
             return false;
         }

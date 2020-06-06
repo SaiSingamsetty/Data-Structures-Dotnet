@@ -39,18 +39,14 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
             var largest = 0;
 
             for (var i = 1; i <= rows; i++)
-            {
-                for (var j = 1; j <= cols; j++)
+            for (var j = 1; j <= cols; j++)
+                if (matrix[i - 1][j - 1] == '1')
                 {
-                    if (matrix[i - 1][j - 1] == '1')
-                    {
-                        dpMatrix[i, j] = 1 + Math.Min(dpMatrix[i - 1, j],
-                                             Math.Min(dpMatrix[i, j - 1], dpMatrix[i - 1, j - 1]));
-                        if (largest < dpMatrix[i, j])
-                            largest = dpMatrix[i, j];
-                    }
+                    dpMatrix[i, j] = 1 + Math.Min(dpMatrix[i - 1, j],
+                                         Math.Min(dpMatrix[i, j - 1], dpMatrix[i - 1, j - 1]));
+                    if (largest < dpMatrix[i, j])
+                        largest = dpMatrix[i, j];
                 }
-            }
 
             return largest * largest;
         }

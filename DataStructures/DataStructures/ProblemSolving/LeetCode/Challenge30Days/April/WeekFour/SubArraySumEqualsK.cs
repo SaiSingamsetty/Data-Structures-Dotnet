@@ -40,13 +40,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
                     counter += lookUp[sumTillNow - k];
 
                 if (lookUp.ContainsKey(sumTillNow))
-                {
                     lookUp[sumTillNow] += 1;
-                }
                 else
-                {
                     lookUp.Add(sumTillNow, 1);
-                }
             }
 
             return counter;
@@ -60,7 +56,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
         {
             var lookUp = new Dictionary<int, List<int>>
             {
-                {0, new List<int>() {-1}}
+                {0, new List<int> {-1}}
             };
 
             var sumSoFar = 0;
@@ -75,18 +71,13 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
                     var curList = lookUp[sumSoFar - k];
                     counter += curList.Count;
 
-                    foreach (var i1 in curList)
-                    {
-                        PrintSubArray(nums, i1 + 1, i);
-                    }
+                    foreach (var i1 in curList) PrintSubArray(nums, i1 + 1, i);
                 }
 
                 if (!lookUp.ContainsKey(sumSoFar))
-                    lookUp.Add(sumSoFar, new List<int>() {i});
+                    lookUp.Add(sumSoFar, new List<int> {i});
                 else
-                {
                     lookUp[sumSoFar].Add(i);
-                }
             }
 
             return counter;
@@ -94,10 +85,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
 
         private static void PrintSubArray(int[] arr, int i, int j)
         {
-            for (int k = i; k < j + 1; k++)
-            {
-                Console.Write(arr[k] + " ");
-            }
+            for (var k = i; k < j + 1; k++) Console.Write(arr[k] + " ");
 
             Console.WriteLine();
         }

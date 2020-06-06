@@ -32,17 +32,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekOne
             while (i < prices.Length - 1)
             {
                 //Find Valley
-                while (i < prices.Length - 1 && prices[i] >= prices[i + 1])
-                {
-                    i++;
-                }
+                while (i < prices.Length - 1 && prices[i] >= prices[i + 1]) i++;
 
                 var valley = prices[i];
                 //Find Peak
-                while (i < prices.Length - 1 && prices[i] <= prices[i + 1])
-                {
-                    i++;
-                }
+                while (i < prices.Length - 1 && prices[i] <= prices[i + 1]) i++;
 
                 var peak = prices[i];
                 maxProfit += peak - valley;
@@ -57,10 +51,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekOne
             var maxProfit = 0;
 
             for (var i = 1; i < prices.Count; i++)
-            {
                 if (prices[i] > prices[i - 1])
                     maxProfit += prices[i] - prices[i - 1];
-            }
 
             return maxProfit;
         }

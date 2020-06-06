@@ -55,10 +55,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
                 return "0";
 
             var temp = string.Empty;
-            while (stack.Count > 0)
-            {
-                temp = stack.Pop() + temp;
-            }
+            while (stack.Count > 0) temp = stack.Pop() + temp;
 
             return temp;
         }
@@ -101,10 +98,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
                 return "0";
 
             var sb = new StringBuilder();
-            while (stack.Count > 0)
-            {
-                sb.Append(stack.Pop());
-            }
+            while (stack.Count > 0) sb.Append(stack.Pop());
 
             var charArray = sb.ToString().ToCharArray();
             Array.Reverse(charArray);

@@ -27,10 +27,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekTwo.M
             if (_stack.Count == 0 || _minValueStack.Count == 0)
                 return;
 
-            if (_stack.Peek().Equals(_minValueStack.Peek()))
-            {
-                _minValueStack.Pop();
-            }
+            if (_stack.Peek().Equals(_minValueStack.Peek())) _minValueStack.Pop();
 
             _stack.Pop();
         }

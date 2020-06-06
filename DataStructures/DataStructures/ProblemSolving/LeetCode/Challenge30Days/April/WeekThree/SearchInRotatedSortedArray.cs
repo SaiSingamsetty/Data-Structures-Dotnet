@@ -15,7 +15,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
     {
         public static void Init()
         {
-            var arr = new int[] {4, 5, 6, 7, 0, 1, 2};
+            var arr = new[] {4, 5, 6, 7, 0, 1, 2};
             Console.WriteLine(Search(arr, 0));
         }
 
@@ -29,19 +29,13 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
                 return index;
 
             if (target > nums[0])
-            {
                 for (var i = 0; i < nums.Length; i++)
-                {
                     if (target == nums[i])
                         return i;
-                }
-            }
 
             for (var i = nums.Length - 1; i >= 0; i--)
-            {
                 if (target == nums[i])
                     return i;
-            }
 
 
             return index;
@@ -73,9 +67,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
                     if (target >= nums[left] && target <= nums[mid])
                         right = mid - 1;
                     else
-                    {
                         left = mid + 1;
-                    }
                 }
                 //second half is strictly increasing
                 else
@@ -83,9 +75,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
                     if (target >= nums[mid] && target <= nums[right])
                         left = mid + 1;
                     else
-                    {
                         right = mid - 1;
-                    }
                 }
             }
 

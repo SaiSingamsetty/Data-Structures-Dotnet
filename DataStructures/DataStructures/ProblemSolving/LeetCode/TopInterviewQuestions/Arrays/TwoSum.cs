@@ -57,13 +57,9 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
                     return new[] {dict[compliment], counter};
 
                 if (dict.ContainsKey(num))
-                {
                     dict[num] = counter;
-                }
                 else
-                {
                     dict.Add(num, counter);
-                }
 
 
                 counter++;

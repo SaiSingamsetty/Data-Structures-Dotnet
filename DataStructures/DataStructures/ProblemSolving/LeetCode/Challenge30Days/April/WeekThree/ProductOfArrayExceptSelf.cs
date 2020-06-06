@@ -6,7 +6,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
     {
         public static void Init()
         {
-            var arr = new int[] {1, 2, 3, 4};
+            var arr = new[] {1, 2, 3, 4};
             Console.WriteLine(string.Join(',', FindProductOfArrayUsingOneArray(arr)));
         }
 
@@ -59,10 +59,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
                 temp = temp * nums[i];
             }
 
-            for (var i = 0; i < length; i++)
-            {
-                pre[i] = pre[i] * post[i];
-            }
+            for (var i = 0; i < length; i++) pre[i] = pre[i] * post[i];
 
             return pre;
         }

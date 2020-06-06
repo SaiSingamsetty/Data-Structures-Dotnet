@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
 {
@@ -36,7 +34,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
 
             for (var i = 0; i <= num; i++)
             {
-                var tempBinaryFormat = (Convert.ToString(i, 2));
+                var tempBinaryFormat = Convert.ToString(i, 2);
                 arr[i] = tempBinaryFormat.Count(y => y == '1');
             }
 
@@ -54,16 +52,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
         {
             var arr = new int[num + 1];
 
-            for (var i = 1; i <= num; i++)
-            {
-                arr[i] = arr[i / 2] + i % 2;
-            }
+            for (var i = 1; i <= num; i++) arr[i] = arr[i / 2] + i % 2;
 
             return arr;
         }
 
         #endregion
-
-
     }
 }

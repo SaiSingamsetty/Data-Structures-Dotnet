@@ -13,8 +13,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
     {
         private readonly int _capacity;
         private readonly Dictionary<int, ListNode> _dictionary = new Dictionary<int, ListNode>();
-        private readonly ListNode _head = new ListNode() {Name = "Head"};
-        private readonly ListNode _tail = new ListNode() {Name = "Tail"};
+        private readonly ListNode _head = new ListNode {Name = "Head"};
+        private readonly ListNode _tail = new ListNode {Name = "Tail"};
         private int _currentNoOfElements;
 
         //Backing up dictionary with Double linked list
@@ -79,7 +79,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
             else
             {
                 //As key does not exist, add a new node at the front of the list
-                var newNode = new ListNode()
+                var newNode = new ListNode
                 {
                     Key = key,
                     Value = value
@@ -91,10 +91,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
 
                 //Check if current capacity exceeds the capacity of the list
                 if (_currentNoOfElements > _capacity)
-                {
                     //Capacity increased, remove the last element (Least recently used)
                     RemoveElementBeforeTail();
-                }
             }
         }
 

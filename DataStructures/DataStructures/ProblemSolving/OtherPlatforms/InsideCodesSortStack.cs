@@ -31,22 +31,18 @@ namespace DataStructures.ProblemSolving.OtherPlatforms
                 var temp = stack.Pop();
 
                 if (tempStack.Count == 0 || temp > tempStack.Peek())
+                {
                     tempStack.Push(temp);
+                }
                 else
                 {
-                    while (tempStack.Count != 0 && tempStack.Peek() > temp)
-                    {
-                        stack.Push(tempStack.Pop());
-                    }
+                    while (tempStack.Count != 0 && tempStack.Peek() > temp) stack.Push(tempStack.Pop());
 
                     tempStack.Push(temp);
                 }
             }
 
-            while (tempStack.Count != 0)
-            {
-                stack.Push(tempStack.Pop());
-            }
+            while (tempStack.Count != 0) stack.Push(tempStack.Pop());
         }
 
         //little more optimized code is available at the top link pasted

@@ -55,15 +55,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
             /* Adding current node value and the parent reference to look up */
             _parentLookUp.Add(node.val, parent);
             if (parent == null)
-            {
                 /* Root node has no parent (= null), Starting depth as 0 */
                 _depthLookUp.Add(node.val, 0);
-            }
             else
-            {
                 /* For each node, Get the parent's depth from lookup and add 1 */
                 _depthLookUp.Add(node.val, _depthLookUp[parent.val] + 1);
-            }
 
             PopulateLookUps(node.left, node);
             PopulateLookUps(node.right, node);

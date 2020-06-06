@@ -27,7 +27,6 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
             var length = digits.Length;
 
             for (var i = length - 1; i >= 0; i--)
-            {
                 if (carry > 0)
                 {
                     var temp = digits[i] + carry;
@@ -41,7 +40,6 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
                         carry = 0;
                     }
                 }
-            }
 
             if (carry > 0)
             {

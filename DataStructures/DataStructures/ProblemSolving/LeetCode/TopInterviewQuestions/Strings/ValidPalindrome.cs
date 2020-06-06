@@ -28,15 +28,19 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
 
                 // If there is another symbol  
                 // in left of sentence 
-                if (!((charL >= 'a' &&
-                       charL <= 'z') || (charL >= '0' && charL <= '9')))
+                if (!(charL >= 'a' &&
+                      charL <= 'z' || charL >= '0' && charL <= '9'))
+                {
                     l++;
+                }
 
                 // If there is another symbol   
                 // in right of sentence 
-                else if (!((charH >= 'a' &&
-                            charH <= 'z') || (charH >= '0' && charH <= '9')))
+                else if (!(charH >= 'a' &&
+                           charH <= 'z' || charH >= '0' && charH <= '9'))
+                {
                     h--;
+                }
 
                 // If characters are equal 
                 else if (charL == charH)
@@ -48,7 +52,9 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
                 // If characters are not equal then 
                 // sentence is not palindrome 
                 else
+                {
                     return false;
+                }
             }
 
             return true;

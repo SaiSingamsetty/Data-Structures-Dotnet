@@ -38,15 +38,13 @@
             memory[1] = 1; // 1 step
 
             for (var i = 2; i <= n; i++)
-            {
                 /* Either we can take one step or two steps
-                 * If we are calculating for 6, to reach 6,
-                 * there are two ways : either 2 steps from 4
-                 * or 1 step from 5. So calculating by taking
-                 * data of last two possibilities.
-                 */
+                     * If we are calculating for 6, to reach 6,
+                     * there are two ways : either 2 steps from 4
+                     * or 1 step from 5. So calculating by taking
+                     * data of last two possibilities.
+                     */
                 memory[i] = memory[i - 1] + memory[i - 2];
-            }
 
             return memory[n];
         }
@@ -92,10 +90,7 @@
 
         private static int FindNoOfWaysUsingApproach3(int n)
         {
-            if (n == 1)
-            {
-                return 1;
-            }
+            if (n == 1) return 1;
 
             var first = 1;
             var second = 2;

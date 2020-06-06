@@ -15,19 +15,18 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
         public static void Init()
         {
             var a1 = new int[4][];
-            a1[0] = new[] { 0, 2 };
-            a1[1] = new[] { 5, 10 };
-            a1[2] = new[] { 13, 23 };
-            a1[3] = new[] { 24, 25 };
+            a1[0] = new[] {0, 2};
+            a1[1] = new[] {5, 10};
+            a1[2] = new[] {13, 23};
+            a1[3] = new[] {24, 25};
 
             var b1 = new int[4][];
-            b1[0] = new[] { 1, 5 };
-            b1[1] = new[] { 8, 12 };
-            b1[2] = new[] { 15, 24 };
-            b1[3] = new[] { 25, 26 };
+            b1[0] = new[] {1, 5};
+            b1[1] = new[] {8, 12};
+            b1[2] = new[] {15, 24};
+            b1[3] = new[] {25, 26};
 
             var res1 = Find(a1, b1);
-
         }
 
         private static int[][] Find(int[][] A, int[][] B)
@@ -38,22 +37,17 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
 
             while (aPointer < A.Length && bPointer < B.Length)
             {
-                if ((A[aPointer][1] >= B[bPointer][0] && A[aPointer][0] < B[bPointer][1])
+                if (A[aPointer][1] >= B[bPointer][0] && A[aPointer][0] < B[bPointer][1]
                     ||
-                    (A[aPointer][0] <= B[bPointer][1] && A[aPointer][1] > B[bPointer][0]))
-                {
-                    output.Add(new[] { Math.Max(A[aPointer][0], B[bPointer][0]), Math.Min(A[aPointer][1], B[bPointer][1]) });
-                }
+                    A[aPointer][0] <= B[bPointer][1] && A[aPointer][1] > B[bPointer][0])
+                    output.Add(new[]
+                        {Math.Max(A[aPointer][0], B[bPointer][0]), Math.Min(A[aPointer][1], B[bPointer][1])});
                 if (A[aPointer][1] < B[bPointer][1])
-                {
                     aPointer++;
-                }
                 else
-                {
                     bPointer++;
-                }
             }
-            
+
             return output.ToArray();
         }
     }

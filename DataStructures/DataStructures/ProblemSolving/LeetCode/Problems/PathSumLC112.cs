@@ -25,7 +25,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
                         left = new TreeNode()
                     }
                 },
-                right = new TreeNode()
+                right = new TreeNode
                 {
                     left = new TreeNode()
                 }
@@ -49,10 +49,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
         {
             // Actual Check point
             // If the node is leaf node and its value is same as remaining sum, then it is positive case.
-            if (node.val == remainingSum && node.left == null && node.right == null)
-            {
-                return true;
-            }
+            if (node.val == remainingSum && node.left == null && node.right == null) return true;
 
             //Check in the left Sub Tree from this node if this hits the check point with (remaining sum subtracted the node val)
             var leftSubTree = node.left != null && RecursionHelper(node.left, remainingSum - node.val);

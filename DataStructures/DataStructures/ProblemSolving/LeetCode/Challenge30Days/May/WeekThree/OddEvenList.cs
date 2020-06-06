@@ -46,7 +46,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
             while (tempEven != null)
             {
                 if (tempEven.next != null)
+                {
                     tempOdd.next = tempEven.next;
+                }
                 else
                 {
                     tempOdd.next = evenPointer;

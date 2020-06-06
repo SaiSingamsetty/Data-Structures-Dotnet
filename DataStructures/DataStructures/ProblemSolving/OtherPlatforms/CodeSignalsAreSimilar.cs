@@ -27,10 +27,8 @@ namespace DataStructures.ProblemSolving.OtherPlatforms
         {
             var errorList = new List<int>();
             for (var i = 0; i < a.Length; i++)
-            {
                 if (a[i] != b[i])
                     errorList.Add(i);
-            }
 
             if (errorList.Count == 0)
                 return true;

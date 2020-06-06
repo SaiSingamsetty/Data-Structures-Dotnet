@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DataStructures.ProblemSolving.LeetCode.Problems
+﻿namespace DataStructures.ProblemSolving.LeetCode.Problems
 {
     // Leetcode 413: https://leetcode.com/problems/arithmetic-slices/
     // A sequence of number is called arithmetic if it consists of at least three elements and if the difference between any two consecutive elements is the same.
@@ -21,10 +17,10 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
     {
         public static void Init()
         {
-            var res1 = FindUsingApproach1(new[] { 1, 3, 5, 7, 9 });
-            var res2 = FindUsingApproach2(new[] { 1, 3, 5, 7, 9 });
-            var res3 = FindUsingApproach3(new[] { 1, 3, 5, 7, 9 });
-            var res4 = FindUsingApproach4(new[] { 1, 3, 5, 7, 9 });
+            var res1 = FindUsingApproach1(new[] {1, 3, 5, 7, 9});
+            var res2 = FindUsingApproach2(new[] {1, 3, 5, 7, 9});
+            var res3 = FindUsingApproach3(new[] {1, 3, 5, 7, 9});
+            var res4 = FindUsingApproach4(new[] {1, 3, 5, 7, 9});
         }
 
         #region Approach 1: Brute Force TC: O(N2), SC: O(1)
@@ -36,41 +32,13 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
             {
                 var d = A[s + 1] - A[s];
                 for (var e = s + 2; e < A.Length; e++)
-                {
                     if (A[e] - A[e - 1] == d)
                         count++;
                     else
                         break;
-                }
             }
+
             return count;
-        }
-
-        #endregion
-
-        #region Approach 2: Recursion TC: O(N), SC: O(N)
-
-        private static int _sum;
-
-        private static int FindUsingApproach2(int[] A)
-        {
-            SliceHelperForApproach2(A, A.Length - 1);
-            return _sum;
-        }
-
-        private static int SliceHelperForApproach2(int[] A, int i)
-        {
-            if (i < 2)
-                return 0;
-            int ap = 0;
-            if (A[i] - A[i - 1] == A[i - 1] - A[i - 2])
-            {
-                ap = 1 + SliceHelperForApproach2(A, i - 1);
-                _sum += ap;
-            }
-            else
-                SliceHelperForApproach2(A, i - 1);
-            return ap;
         }
 
         #endregion
@@ -89,6 +57,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
                 dp[i] = 1 + dp[i - 1];
                 sum += dp[i];
             }
+
             return sum;
         }
 
@@ -101,16 +70,47 @@ namespace DataStructures.ProblemSolving.LeetCode.Problems
             var dp = 0;
             var sum = 0;
             for (var i = 2; i < A.Length; i++)
-            {
                 if (A[i] - A[i - 1] == A[i - 1] - A[i - 2])
                 {
                     dp = 1 + dp;
                     sum += dp;
                 }
                 else
+                {
                     dp = 0;
-            }
+                }
+
             return sum;
+        }
+
+        #endregion
+
+        #region Approach 2: Recursion TC: O(N), SC: O(N)
+
+        private static int _sum;
+
+        private static int FindUsingApproach2(int[] A)
+        {
+            SliceHelperForApproach2(A, A.Length - 1);
+            return _sum;
+        }
+
+        private static int SliceHelperForApproach2(int[] A, int i)
+        {
+            if (i < 2)
+                return 0;
+            var ap = 0;
+            if (A[i] - A[i - 1] == A[i - 1] - A[i - 2])
+            {
+                ap = 1 + SliceHelperForApproach2(A, i - 1);
+                _sum += ap;
+            }
+            else
+            {
+                SliceHelperForApproach2(A, i - 1);
+            }
+
+            return ap;
         }
 
         #endregion

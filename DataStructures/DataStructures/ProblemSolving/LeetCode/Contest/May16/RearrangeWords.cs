@@ -19,10 +19,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
             var stringInputArray = text.Split(' ');
 
             var lookUp = new Dictionary<int, int>();
-            for (var i = 0; i < stringInputArray.Length; i++)
-            {
-                lookUp.Add(i, stringInputArray[i].Length);
-            }
+            for (var i = 0; i < stringInputArray.Length; i++) lookUp.Add(i, stringInputArray[i].Length);
 
             var orderByLength = lookUp.OrderBy(x => x.Value);
 
@@ -35,9 +32,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
                     outputString += char.ToUpper(stringInputArray[newIndex][0]) +
                                     stringInputArray[newIndex].Substring(1) + " ";
                 else
-                {
                     outputString += stringInputArray[newIndex].ToLower() + " ";
-                }
             }
 
             return outputString.TrimEnd();
@@ -53,9 +48,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
             for (var i = 0; i < stringInputArray.Count; i++)
             {
                 while (stack.Count != 0 && stack.Peek().Count() > stringInputArray[i].Length)
-                {
                     tempStack.Push(stack.Pop().ToLower());
-                }
 
                 stack.Push(stringInputArray[i].ToLower());
 
@@ -65,7 +58,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
 
             var temp = string.Empty;
             while (stack.Count() != 0)
-            {
                 if (stack.Count() == 1)
                 {
                     var pop = stack.Pop();
@@ -75,7 +67,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
                 {
                     temp = stack.Pop() + " " + temp;
                 }
-            }
 
             return temp.Trim();
         }

@@ -71,7 +71,7 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Trees
 
         private static bool IsBstMinMaxApproach(TreeNode<int> root)
         {
-            if (root == null || (root.left == null && root.right == null))
+            if (root == null || root.left == null && root.right == null)
                 return true;
 
             return MinMaxHelper(root, long.MinValue, long.MaxValue);

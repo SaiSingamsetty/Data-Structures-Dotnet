@@ -29,16 +29,16 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
             var dict = new Dictionary<int, int>();
 
             foreach (var eachNum in nums)
-            {
                 if (!dict.ContainsKey(eachNum))
+                {
                     dict.Add(eachNum, 1);
+                }
                 else
                 {
                     dict[eachNum]++;
                     if (dict[eachNum] > threshold)
                         return eachNum;
                 }
-            }
 
             return -1;
         }
@@ -65,10 +65,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
             //This loop just confirms the majority element is really majority
             count = 0;
             foreach (var eachNum in nums)
-            {
                 if (eachNum == candidate)
                     count++;
-            }
 
             return count > nums.Length / 2 ? candidate : int.MinValue;
         }

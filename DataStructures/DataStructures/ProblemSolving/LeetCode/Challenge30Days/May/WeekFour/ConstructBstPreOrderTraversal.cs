@@ -37,10 +37,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
                 TreeNode temp = null;
                 /* Keep on popping while the next value is greater than 
                  stack's top value. */
-                while (s.Count > 0 && pre[i] > s.Peek().val)
-                {
-                    temp = s.Pop();
-                }
+                while (s.Count > 0 && pre[i] > s.Peek().val) temp = s.Pop();
 
                 // Make this greater value as the right child
                 // and push it to the stack 
@@ -70,10 +67,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
         private static TreeNode ConstructBst(int[] preOrder)
         {
             var tree = new TreeNode(preOrder[0]);
-            foreach (var i in preOrder.Skip(1))
-            {
-                AddNodeToBinarySearchTree(tree, i);
-            }
+            foreach (var i in preOrder.Skip(1)) AddNodeToBinarySearchTree(tree, i);
 
             return tree;
         }
@@ -84,24 +78,16 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
             if (value <= nodeValue)
             {
                 if (node.left != null)
-                {
                     AddNodeToBinarySearchTree(node.left, value);
-                }
                 else
-                {
                     node.left = new TreeNode(value);
-                }
             }
             else
             {
                 if (node.right != null)
-                {
                     AddNodeToBinarySearchTree(node.right, value);
-                }
                 else
-                {
                     node.right = new TreeNode(value);
-                }
             }
         }
 

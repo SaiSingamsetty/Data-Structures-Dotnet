@@ -33,37 +33,20 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekTwo
         {
             var sStack = new Stack<char>();
             foreach (var eachChar in S)
-            {
                 if (eachChar != '#')
-                {
                     sStack.Push(eachChar);
-                }
-                else if (sStack.Count != 0)
-                {
-                    sStack.Pop();
-                }
-            }
+                else if (sStack.Count != 0) sStack.Pop();
 
             var tStack = new Stack<char>();
             foreach (var eachChar in T)
-            {
                 if (eachChar != '#')
-                {
                     tStack.Push(eachChar);
-                }
-                else if (tStack.Count != 0)
-                {
-                    tStack.Pop();
-                }
-            }
+                else if (tStack.Count != 0) tStack.Pop();
 
             while (sStack.Count != 0)
             {
                 var curChar = sStack.Pop();
-                if (tStack.Count == 0 || tStack.Pop() != curChar)
-                {
-                    return false;
-                }
+                if (tStack.Count == 0 || tStack.Pop() != curChar) return false;
             }
 
             return sStack.Count == 0 && tStack.Count == 0;
@@ -80,7 +63,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekTwo
             while (sPointer >= 0 || tPointer >= 0)
             {
                 while (sPointer >= 0)
-                {
                     if (S[sPointer] == '#')
                     {
                         sSkips++;
@@ -95,10 +77,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekTwo
                     {
                         break;
                     }
-                }
 
                 while (tPointer >= 0)
-                {
                     if (T[tPointer] == '#')
                     {
                         tSkips++;
@@ -113,7 +93,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekTwo
                     {
                         break;
                     }
-                }
 
                 if (sPointer >= 0 && tPointer >= 0 && S[sPointer] != T[tPointer])
                     return false;

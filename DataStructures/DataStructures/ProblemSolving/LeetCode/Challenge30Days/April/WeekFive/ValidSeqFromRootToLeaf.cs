@@ -15,23 +15,23 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFive
     {
         public static void Init()
         {
-            var tree = new TreeNode(0)
+            var tree = new TreeNode
             {
                 left = new TreeNode(1)
                 {
-                    left = new TreeNode(0)
+                    left = new TreeNode
                     {
                         right = new TreeNode(1)
                     },
                     right = new TreeNode(1)
                     {
-                        right = new TreeNode(0),
-                        left = new TreeNode(0)
+                        right = new TreeNode(),
+                        left = new TreeNode()
                     }
                 },
-                right = new TreeNode(0)
+                right = new TreeNode
                 {
-                    left = new TreeNode(0)
+                    left = new TreeNode()
                 }
             };
             Console.WriteLine(IsValidSeq(tree, new[] {0, 1, 1}));

@@ -23,7 +23,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
             var arr = new[]
             {
                 new[] {1, 2, 5},
-                new[] {3, 2, 1},
+                new[] {3, 2, 1}
                 //new[] {4, 2, 1}
             };
             Console.WriteLine(FindMinimumPathSum(arr));
@@ -44,25 +44,15 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
             tempGrid[0, 0] = grid[0][0];
 
             //Fill first row
-            for (var i = 1; i < cols; i++)
-            {
-                tempGrid[0, i] = tempGrid[0, i - 1] + grid[0][i];
-            }
+            for (var i = 1; i < cols; i++) tempGrid[0, i] = tempGrid[0, i - 1] + grid[0][i];
 
             //Fill first col
-            for (var i = 1; i < rows; i++)
-            {
-                tempGrid[i, 0] = tempGrid[i - 1, 0] + grid[i][0];
-            }
+            for (var i = 1; i < rows; i++) tempGrid[i, 0] = tempGrid[i - 1, 0] + grid[i][0];
 
             //Fill other cells
             for (var i = 1; i < rows; i++)
-            {
-                for (var j = 1; j < cols; j++)
-                {
-                    tempGrid[i, j] = grid[i][j] + Math.Min(tempGrid[i - 1, j], tempGrid[i, j - 1]);
-                }
-            }
+            for (var j = 1; j < cols; j++)
+                tempGrid[i, j] = grid[i][j] + Math.Min(tempGrid[i - 1, j], tempGrid[i, j - 1]);
 
             return tempGrid[rows - 1, cols - 1];
         }

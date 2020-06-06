@@ -31,7 +31,6 @@
             var counter = 1;
 
             for (var i = 1; i < s.Length; i++)
-            {
                 if (s[i] == s[i - 1])
                 {
                     counter++;
@@ -42,7 +41,6 @@
                 {
                     counter = 1;
                 }
-            }
 
             return maxPowerTillNow;
         }

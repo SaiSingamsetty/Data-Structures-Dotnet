@@ -10,17 +10,17 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
     {
         public static void Init()
         {
-            var path1 = new List<string>()
+            var path1 = new List<string>
             {
                 "B",
                 "C"
             };
-            var path2 = new List<string>()
+            var path2 = new List<string>
             {
                 "D",
                 "B"
             };
-            var path3 = new List<string>()
+            var path3 = new List<string>
             {
                 "C",
                 "A"

@@ -46,10 +46,7 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
                 var hashSet = new HashSet<char>();
                 for (var j = 0; j < size; j++)
                 {
-                    if (!char.IsDigit(board[j][i]))
-                    {
-                        continue;
-                    }
+                    if (!char.IsDigit(board[j][i])) continue;
 
                     if (hashSet.Contains(board[j][i]))
                         return false;
@@ -69,10 +66,7 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
                 var hashSet = new HashSet<char>();
                 for (var j = 0; j < size; j++)
                 {
-                    if (!char.IsDigit(board[i][j]))
-                    {
-                        continue;
-                    }
+                    if (!char.IsDigit(board[i][j])) continue;
 
                     if (hashSet.Contains(board[i][j]))
                         return false;
@@ -88,14 +82,12 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
         {
             var size = board.Length;
             for (var i = 0; i < size / 3; i++)
+            for (var j = 0; j < size / 3; j++)
             {
-                for (var j = 0; j < size / 3; j++)
-                {
-                    var indexI = i * 3;
-                    var indexJ = j * 3;
-                    if (!CheckBlock(board, indexI, indexJ))
-                        return false;
-                }
+                var indexI = i * 3;
+                var indexJ = j * 3;
+                if (!CheckBlock(board, indexI, indexJ))
+                    return false;
             }
 
             return true;
@@ -105,21 +97,16 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
         {
             var hashSet = new HashSet<char>();
             for (var i = 0; i < 3; i++)
+            for (var j = 0; j < 3; j++)
             {
-                for (var j = 0; j < 3; j++)
-                {
-                    var indexI = i + rowIndex;
-                    var indexJ = j + colIndex;
-                    if (!char.IsDigit(board[indexI][indexJ]))
-                    {
-                        continue;
-                    }
+                var indexI = i + rowIndex;
+                var indexJ = j + colIndex;
+                if (!char.IsDigit(board[indexI][indexJ])) continue;
 
-                    if (hashSet.Contains(board[indexI][indexJ]))
-                        return false;
+                if (hashSet.Contains(board[indexI][indexJ]))
+                    return false;
 
-                    hashSet.Add(board[indexI][indexJ]);
-                }
+                hashSet.Add(board[indexI][indexJ]);
             }
 
             return true;

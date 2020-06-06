@@ -29,23 +29,21 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
             var list = new List<string>();
 
             for (var i = 1; i <= n - 1; i++)
+            for (var j = 2; j <= n; j++)
             {
-                for (var j = 2; j <= n; j++)
-                {
-                    var gcd = FindGcd(i, j);
-                    if (i / j == 1 || i / j > 1)
-                        continue;
+                var gcd = FindGcd(i, j);
+                if (i / j == 1 || i / j > 1)
+                    continue;
 
-                    if (gcd == 1)
-                    {
-                        list.Add(i + "/" + j);
-                    }
-                    else
-                    {
-                        var item = i / gcd + "/" + j / gcd;
-                        if (!list.Contains(item))
-                            list.Add(item);
-                    }
+                if (gcd == 1)
+                {
+                    list.Add(i + "/" + j);
+                }
+                else
+                {
+                    var item = i / gcd + "/" + j / gcd;
+                    if (!list.Contains(item))
+                        list.Add(item);
                 }
             }
 
@@ -55,12 +53,10 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
         private static int FindGcd(int a, int b)
         {
             while (a != 0 && b != 0)
-            {
                 if (a > b)
                     a %= b;
                 else
                     b %= a;
-            }
 
             return a == 0 ? b : a;
         }

@@ -64,10 +64,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
         private static bool CompareArraysHelper(int[] a, int[] b)
         {
             for (var i = 0; i < 25; i++)
-            {
                 if (a[i] != b[i])
                     return false;
-            }
 
             return true;
         }

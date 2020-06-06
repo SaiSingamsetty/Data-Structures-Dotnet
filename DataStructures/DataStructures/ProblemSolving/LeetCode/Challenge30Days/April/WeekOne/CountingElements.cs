@@ -26,18 +26,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekOne
             var hashSet = new HashSet<int>();
             var counter = 0;
 
-            foreach (var i in arr)
-            {
-                hashSet.Add(i);
-            }
+            foreach (var i in arr) hashSet.Add(i);
 
             foreach (var i in arr)
-            {
                 if (hashSet.Contains(i + 1))
-                {
                     counter++;
-                }
-            }
 
             return counter;
         }

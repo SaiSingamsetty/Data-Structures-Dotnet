@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
 {
@@ -19,11 +17,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
 
             var adj = new List<int>[N];
 
-            for (var i = 0; i < N; i++)
-            {
-                adj[i] = new List<int>();
-            }
-            
+            for (var i = 0; i < N; i++) adj[i] = new List<int>();
+
             foreach (var p in dislikes)
             {
                 adj[p[0] - 1].Add(p[1] - 1);
@@ -31,10 +26,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
             }
 
             for (var i = 0; i < N; ++i)
-            {
                 if (groups[i] == -1 && !dfs(adj, groups, i, 0))
                     return false;
-            }
 
             return true;
         }
@@ -44,17 +37,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
             if (groups[v] == -1)
                 groups[v] = grp;
             else
-            {
                 return groups[v] == grp;
-            }
 
             foreach (var n in adj[v])
-            {
                 if (!dfs(adj, groups, n, 1 - grp))
-                {
                     return false;
-                }
-            }
 
             return true;
         }

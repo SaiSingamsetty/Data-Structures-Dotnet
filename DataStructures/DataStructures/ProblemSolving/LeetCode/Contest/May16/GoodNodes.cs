@@ -62,15 +62,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May16
             if (tempMax == node.val)
                 Counter++;
 
-            if (node.left != null)
-            {
-                RecursionHelper(node.left, tempMax);
-            }
+            if (node.left != null) RecursionHelper(node.left, tempMax);
 
-            if (node.right != null)
-            {
-                RecursionHelper(node.right, tempMax);
-            }
+            if (node.right != null) RecursionHelper(node.right, tempMax);
         }
     }
 }

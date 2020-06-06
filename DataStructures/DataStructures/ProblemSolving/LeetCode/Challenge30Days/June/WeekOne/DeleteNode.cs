@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne.Models;
+﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne
 {
@@ -22,7 +19,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne
             list.next.next.next = new ListNode(9);
 
             Delete(list.next); // The node passed is '5' and that has to be deleted from list.
-                               // No head or prev nodes info will be sent
+            // No head or prev nodes info will be sent
         }
 
         private static void Delete(ListNode node)
@@ -37,7 +34,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne
 
             // Nullify the next node now, Just detaching from list
             nextNode.next = null;
-
         }
     }
 }

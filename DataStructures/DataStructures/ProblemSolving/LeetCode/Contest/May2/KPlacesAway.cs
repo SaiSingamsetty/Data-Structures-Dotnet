@@ -10,7 +10,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
     {
         public static void Init()
         {
-            var arr = new int[] {1, 0, 0};
+            var arr = new[] {1, 0, 0};
             var res = FindIfKPlacesAway(arr, 1);
         }
 
@@ -20,8 +20,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
             var listOfIndices = new List<int>();
             var prevOne = -1;
             listOfIndices.Add(int.MaxValue);
-            for (int i = 0; i < nums.Length; i++)
-            {
+            for (var i = 0; i < nums.Length; i++)
                 if (nums[i] == 1)
                 {
                     if (prevOne == -1)
@@ -34,7 +33,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
                         prevOne = i + 1;
                     }
                 }
-            }
 
             return listOfIndices.Min() > k;
         }

@@ -40,15 +40,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
 
         private static int FindLcs(char[] str1, char[] str2, int len1, int len2)
         {
-            if (len1 == str1.Length || len2 == str2.Length)
-            {
-                return 0;
-            }
+            if (len1 == str1.Length || len2 == str2.Length) return 0;
 
-            if (str1[len1] == str2[len2])
-            {
-                return 1 + FindLcs(str1, str2, len1 + 1, len2 + 1);
-            }
+            if (str1[len1] == str2[len2]) return 1 + FindLcs(str1, str2, len1 + 1, len2 + 1);
 
             return Math.Max(FindLcs(str1, str2, len1 + 1, len2), FindLcs(str1, str2, len1, len2 + 1));
         }
@@ -65,21 +59,15 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
             var max = 0;
 
             for (var i = 1; i <= text1.Length; i++)
+            for (var j = 1; j <= text2.Length; j++)
             {
-                for (var j = 1; j <= text2.Length; j++)
-                {
-                    if (text1[i - 1] == text2[j - 1])
-                    {
-                        matrix[i, j] = matrix[i - 1, j - 1] + 1;
-                    }
-                    else
-                    {
-                        matrix[i, j] = Math.Max(matrix[i, j - 1], matrix[i - 1, j]);
-                    }
+                if (text1[i - 1] == text2[j - 1])
+                    matrix[i, j] = matrix[i - 1, j - 1] + 1;
+                else
+                    matrix[i, j] = Math.Max(matrix[i, j - 1], matrix[i - 1, j]);
 
-                    if (matrix[i, j] > max)
-                        max = matrix[i, j];
-                }
+                if (matrix[i, j] > max)
+                    max = matrix[i, j];
             }
 
             return max;

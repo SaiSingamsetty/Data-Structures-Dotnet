@@ -27,7 +27,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekTwo
             var maxLength = 0;
             for (var i = 0; i < nums.Length; i++)
             {
-                count += (nums[i] == 0 ? -1 : 1);
+                count += nums[i] == 0 ? -1 : 1;
 
                 if (dict.ContainsKey(count))
                     maxLength = Math.Max(maxLength, i - dict[count]);

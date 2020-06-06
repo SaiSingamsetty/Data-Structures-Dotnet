@@ -10,7 +10,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
     {
         public static void Init()
         {
-            var res = Check(new int[] {12, 1, 12}, 10);
+            var res = Check(new[] {12, 1, 12}, 10);
         }
 
         private static IList<bool> Check(int[] candies, int extraCandies)
@@ -18,10 +18,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May2
             var maxCandies = candies.Max();
             var list = new List<bool>();
 
-            foreach (var eachChild in candies)
-            {
-                list.Add(eachChild + extraCandies >= maxCandies);
-            }
+            foreach (var eachChild in candies) list.Add(eachChild + extraCandies >= maxCandies);
 
             return list;
         }

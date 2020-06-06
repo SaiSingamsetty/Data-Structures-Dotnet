@@ -33,11 +33,14 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
             var starStack = new Stack<int>();
 
             for (var i = 0; i < s.Length; i++)
-            {
                 if (s[i] == '(')
+                {
                     openStack.Push(i);
+                }
                 else if (s[i] == '*')
+                {
                     starStack.Push(i);
+                }
                 else if (s[i] == ')')
                 {
                     if (openStack.Count != 0)
@@ -45,11 +48,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
                     else if (starStack.Count != 0)
                         starStack.Pop();
                     else
-                    {
                         return false;
-                    }
                 }
-            }
 
             //Balance remaining open brackets with stars available in the stack. if it is not possible, return False
             while (openStack.Count != 0)
@@ -81,7 +81,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
             var leftBalance = 0;
             foreach (var eachChar in s)
             {
-                if ((eachChar == '(') || (eachChar == '*'))
+                if (eachChar == '(' || eachChar == '*')
                     leftBalance++;
                 else
                     leftBalance--;
@@ -95,7 +95,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
             var rightBalance = 0;
             for (var i = s.Length - 1; i >= 0; i--)
             {
-                if ((s[i] == ')') || (s[i] == '*'))
+                if (s[i] == ')' || s[i] == '*')
                     rightBalance++;
                 else
                     rightBalance--;

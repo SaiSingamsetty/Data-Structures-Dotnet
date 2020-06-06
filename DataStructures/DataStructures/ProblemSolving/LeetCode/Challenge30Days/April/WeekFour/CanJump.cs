@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
+﻿namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekFour
 {
     // Challenge25: https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/531/week-4/3310/
     // Given an array of non-negative integers, you are initially positioned at the first index of the array. 

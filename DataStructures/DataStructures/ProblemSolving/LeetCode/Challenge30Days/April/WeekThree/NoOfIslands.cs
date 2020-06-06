@@ -34,16 +34,12 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
             var noOfIslands = 0;
 
             for (var i = 0; i < rows; i++)
-            {
-                for (var j = 0; j < cols; j++)
+            for (var j = 0; j < cols; j++)
+                if (grid[i][j] == '1')
                 {
-                    if (grid[i][j] == '1')
-                    {
-                        MarkFieldAsVisited(grid, i, j, rows, cols);
-                        noOfIslands++;
-                    }
+                    MarkFieldAsVisited(grid, i, j, rows, cols);
+                    noOfIslands++;
                 }
-            }
 
             return noOfIslands;
         }

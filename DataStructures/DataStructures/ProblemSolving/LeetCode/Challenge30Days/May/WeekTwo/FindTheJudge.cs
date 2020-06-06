@@ -104,10 +104,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
 
         private static int FindUsingApproach2(int N, int[][] trust)
         {
-            if (trust.Length < N - 1)
-            {
-                return -1;
-            }
+            if (trust.Length < N - 1) return -1;
 
             var beingPublic = new int[N + 1];
             var beingJudge = new int[N + 1];
@@ -121,12 +118,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
             }
 
             for (var i = 1; i <= N; i++)
-            {
                 if (beingJudge[i] == N - 1 && beingPublic[i] == 0)
-                {
                     return i;
-                }
-            }
 
             return -1;
         }

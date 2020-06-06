@@ -24,12 +24,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
         {
             var count = 0;
             foreach (var eachChar in S)
-            {
                 if (J.Contains(eachChar))
-                {
                     count++;
-                }
-            }
 
             return count;
         }
@@ -51,16 +47,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
         {
             var hashSet = new HashSet<char>();
             var counter = 0;
-            foreach (var eachChar in J)
-            {
-                hashSet.Add(eachChar);
-            }
+            foreach (var eachChar in J) hashSet.Add(eachChar);
 
             foreach (var eachChar in S)
-            {
                 if (hashSet.Contains(eachChar))
                     counter++;
-            }
 
             return counter;
         }

@@ -34,13 +34,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekOne
             {
                 var val = new string(str.Select(r => r).OrderBy(x => x).ToArray());
                 if (dict.ContainsKey(val))
-                {
                     dict[val].Add(str);
-                }
                 else
-                {
-                    dict.Add(val, new List<string>() {str});
-                }
+                    dict.Add(val, new List<string> {str});
             }
 
             return dict.Values.ToList();

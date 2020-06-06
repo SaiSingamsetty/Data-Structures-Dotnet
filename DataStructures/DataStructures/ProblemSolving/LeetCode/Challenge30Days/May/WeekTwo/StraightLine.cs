@@ -38,7 +38,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
             decimal slope = int.MinValue;
 
             //Compare slopes of various points with first point only
-            for (int i = 1; i < coordinatesCount; i++)
+            for (var i = 1; i < coordinatesCount; i++)
             {
                 var tempXy = coordinates[i];
                 var tempSlope = (decimal) (tempXy[0] - prevXy[0]) != 0
@@ -65,12 +65,10 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekTwo
             // (yi - y0)/(xi - x0) = (y1 - y0)/(x1 - x0)
             // => (yi - y0) * (x1 - x0) = (y1 - y0) * (xi - x0) 
 
-            for (int i = 2; i < coordinates.Length; i++)
-            {
+            for (var i = 2; i < coordinates.Length; i++)
                 if ((coordinates[i][1] - coordinates[0][1]) * (coordinates[1][0] - coordinates[0][0]) !=
                     (coordinates[i][0] - coordinates[0][0]) * (coordinates[1][1] - coordinates[0][1]))
                     return false;
-            }
 
             return true;
         }

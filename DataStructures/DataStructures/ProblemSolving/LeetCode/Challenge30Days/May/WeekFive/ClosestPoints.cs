@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFive
 {
@@ -27,12 +26,11 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFive
         public static void Init()
         {
             var input1 = new int[2][];
-            input1[0] = new[] { 1, 3 };
-            input1[1] = new[] { -2, 2 };
+            input1[0] = new[] {1, 3};
+            input1[1] = new[] {-2, 2};
             var res1 = FindUsingApproach1(input1, 1);
-
         }
-        
+
         #region Approach 1: TC: O(NlogN)
 
         private static int[][] FindUsingApproach1(int[][] points, int K)
@@ -52,7 +50,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFive
             {
                 var keyValue = sortedLookUp.ElementAt(i);
                 var point = points[keyValue.Key];
-                arr[i] = new[] { point[0], point[1] };
+                arr[i] = new[] {point[0], point[1]};
             }
 
             return arr;

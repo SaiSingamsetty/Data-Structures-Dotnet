@@ -26,9 +26,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne
                 if (IsBadVersion(mid))
                     end = mid; //If the mid one is bad, then first bad version will be definitely 'before' or 'equal' to mid
                 else
-                {
                     start = mid + 1; // If the mid one is good, then first bad version will be 'after' mid
-                }
             }
 
             return start;

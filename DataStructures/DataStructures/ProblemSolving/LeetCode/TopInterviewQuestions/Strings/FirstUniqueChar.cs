@@ -16,7 +16,7 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
         public static void Init()
         {
             var str = "leetcode";
-            Console.WriteLine(FindFirstUniqueCharUsingBuiltInFunc(s: str));
+            Console.WriteLine(FindFirstUniqueCharUsingBuiltInFunc(str));
         }
 
         private static int FindFirstUniqueChar(string s)
@@ -29,13 +29,9 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
             foreach (var eachChar in s)
             {
                 if (dict.ContainsKey(eachChar))
-                {
                     dict[eachChar] = dict[eachChar] * 0;
-                }
                 else
-                {
                     dict.Add(eachChar, pointer);
-                }
 
                 pointer++;
             }
@@ -47,16 +43,11 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
         {
             var arr = new int[26];
 
-            foreach (var eachChar in s)
-            {
-                arr[eachChar - 'a']++;
-            }
+            foreach (var eachChar in s) arr[eachChar - 'a']++;
 
             for (var i = 0; i < s.Length; i++)
-            {
                 if (arr[s[i] - 'a'] == 1)
                     return i;
-            }
 
             return -1;
         }
@@ -64,10 +55,8 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings
         private static int FindFirstUniqueCharUsingBuiltInFunc(string s)
         {
             for (var i = 0; i < s.Length; i++)
-            {
                 if (s.IndexOf(s[i]) == s.LastIndexOf(s[i]))
                     return i;
-            }
 
             return -1;
         }

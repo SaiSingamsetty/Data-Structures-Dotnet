@@ -15,7 +15,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
     {
         public static void Init()
         {
-            var arr = new[] { 0, 1, 0, 0, 1, 1, 0 };
+            var arr = new[] {0, 1, 0, 0, 1, 1, 0};
             var response = MaxLengthOfContiguousArray(arr);
             Console.WriteLine(response);
         }
@@ -27,14 +27,15 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour
             var maxLength = 0;
             for (var i = 0; i < nums.Length; i++)
             {
-                count += (nums[i] == 0 ? -1 : 1);
+                count += nums[i] == 0 ? -1 : 1;
 
                 if (dict.ContainsKey(count))
                     maxLength = Math.Max(maxLength, i - dict[count]);
                 else
                     dict[count] = i;
 
-                if (count == 0) //If count ever becomes 0 that means from start till current index i, we have max contiguous array. 
+                if (count == 0
+                ) //If count ever becomes 0 that means from start till current index i, we have max contiguous array. 
                     maxLength = i + 1;
             }
 

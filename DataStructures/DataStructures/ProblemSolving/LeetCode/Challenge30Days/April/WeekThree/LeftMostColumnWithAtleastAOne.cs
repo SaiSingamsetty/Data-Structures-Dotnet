@@ -23,7 +23,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
 
         public IList<int> Dimensions()
         {
-            return new List<int>() {3, 4};
+            return new List<int> {3, 4};
         }
     }
 
@@ -50,7 +50,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
             var result = -1;
 
             while (x >= 0 && y >= 0)
-            {
                 if (binaryMatrix.Get(x, y) == 1)
                 {
                     result = y;
@@ -60,7 +59,6 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekThree
                 {
                     x--;
                 }
-            }
 
             return result + 1;
         }

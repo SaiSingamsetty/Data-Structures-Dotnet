@@ -45,7 +45,7 @@
             long max = num;
             while (min <= max)
             {
-                long mid = (min + max) / 2;
+                var mid = (min + max) / 2;
                 if (mid * mid == num) return true;
                 if (mid * mid > num) max = mid - 1;
                 else min = mid + 1;

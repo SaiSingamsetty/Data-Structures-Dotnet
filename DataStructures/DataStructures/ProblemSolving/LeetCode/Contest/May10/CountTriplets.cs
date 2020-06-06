@@ -83,10 +83,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May10
                 while (k < length)
                 {
                     var res = FindXor(arr, i, k);
-                    if (res == 0)
-                    {
-                        FindPossibilities(i, k);
-                    }
+                    if (res == 0) FindPossibilities(i, k);
 
                     k++;
                 }
@@ -104,7 +101,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Contest.May10
             {
                 var exists = _possibilities.Any(x => x.I == pointer1 && x.J == j && x.K == pointer2);
                 if (!exists)
-                    _possibilities.Add(new Possibility()
+                    _possibilities.Add(new Possibility
                     {
                         I = pointer1,
                         J = j,

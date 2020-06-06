@@ -43,10 +43,7 @@ namespace DataStructures.DataStructureSpecific.LinkedListProblems
         public void Append(int newData)
         {
             var currentNode = Head;
-            while (currentNode.Next != null)
-            {
-                currentNode = currentNode.Next;
-            }
+            while (currentNode.Next != null) currentNode = currentNode.Next;
 
             currentNode.Next = new Node(newData);
         }

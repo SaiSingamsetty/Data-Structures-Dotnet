@@ -1,4 +1,4 @@
-﻿namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne.Models
+﻿namespace DataStructures.ProblemSolving.OtherPlatforms.Models
 {
     public class ListNode
     {

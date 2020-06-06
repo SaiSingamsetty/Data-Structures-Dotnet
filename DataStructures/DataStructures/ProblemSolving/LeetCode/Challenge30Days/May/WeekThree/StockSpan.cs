@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
 {
@@ -21,9 +19,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
 
     public class StockSpanner
     {
-        private readonly Stack<int> _stack;
-        private readonly List<int> _span;
         private readonly List<int> _pricesList;
+        private readonly List<int> _span;
+        private readonly Stack<int> _stack;
         private int _counter;
 
         public StockSpanner()
@@ -46,11 +44,9 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
             if (_stack.Count == 0)
                 _span.Add(_counter + 1);
             else
-            {
                 // It means all the elements in the stack are greater than the current price
                 // So difference between the current day index and top of the stack (day index)
                 _span.Add(_counter - _stack.Peek());
-            }
 
             _stack.Push(_counter);
             _pricesList.Add(price);

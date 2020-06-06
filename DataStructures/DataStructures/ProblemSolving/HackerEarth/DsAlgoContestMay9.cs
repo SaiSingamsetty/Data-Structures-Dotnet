@@ -65,7 +65,6 @@ namespace DataStructures.ProblemSolving.HackerEarth
             var prev = smells[0];
             var beforePrev = smells[0];
             for (var i = 1; i < count; i++)
-            {
                 if (smells[i] > prev)
                 {
                     max++;
@@ -84,7 +83,6 @@ namespace DataStructures.ProblemSolving.HackerEarth
                         beforePrev = i >= 1 ? smells[i - 1] : smells[0];
                     }
                 }
-            }
 
             Console.WriteLine(max);
         }

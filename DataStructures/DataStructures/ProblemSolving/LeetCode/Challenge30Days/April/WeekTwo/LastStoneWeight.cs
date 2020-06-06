@@ -21,7 +21,7 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.April.WeekTwo
     {
         public static void Init()
         {
-            var stones = new int[] {2, 2};
+            var stones = new[] {2, 2};
             var weight = FindLastStoneWeight(stones);
             Console.WriteLine(weight);
         }

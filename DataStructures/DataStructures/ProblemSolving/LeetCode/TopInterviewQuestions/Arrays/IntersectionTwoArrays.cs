@@ -10,8 +10,8 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
     {
         public static void Init()
         {
-            var inputArray1 = new int[] {1, 2, 2, 1};
-            var inputArray2 = new int[] {2, 2};
+            var inputArray1 = new[] {1, 2, 2, 1};
+            var inputArray2 = new[] {2, 2};
             var response = Intersect(inputArray1, inputArray2);
             Console.WriteLine(string.Join(',', response));
         }
@@ -22,25 +22,17 @@ namespace DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays
             var outputList = new List<int>();
 
             foreach (var num1 in nums1)
-            {
                 if (dict.ContainsKey(num1))
-                {
                     dict[num1] += 1;
-                }
                 else
-                {
                     dict.Add(num1, 1);
-                }
-            }
 
             foreach (var num2 in nums2)
-            {
                 if (dict.ContainsKey(num2) && dict[num2] > 0)
                 {
                     outputList.Add(num2);
                     dict[num2] -= 1;
                 }
-            }
 
             return outputList.ToArray();
         }

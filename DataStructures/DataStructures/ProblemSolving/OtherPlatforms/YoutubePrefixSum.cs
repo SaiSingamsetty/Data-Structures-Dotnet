@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DataStructures.ProblemSolving.OtherPlatforms
 {
@@ -14,8 +12,8 @@ namespace DataStructures.ProblemSolving.OtherPlatforms
     {
         public static void Init()
         {
-            var input1 = new int[] { 6, 3, -2, 4, -1, 0, -5 };
-            var res1 = FindSum(input1, new[] { new[] { 2, 6 }, new[] { 1, 4 } });
+            var input1 = new[] {6, 3, -2, 4, -1, 0, -5};
+            var res1 = FindSum(input1, new[] {new[] {2, 6}, new[] {1, 4}});
         }
 
 
@@ -23,23 +21,16 @@ namespace DataStructures.ProblemSolving.OtherPlatforms
 
         private static IEnumerable<int> FindSum(IList<int> arr, IEnumerable<int[]> ranges)
         {
-            for (var i = 1; i < arr.Count; i++)
-            {
-                arr[i] = arr[i - 1] + arr[i];  // Formed the prefix sum array  O(N)
-            }
+            for (var i = 1; i < arr.Count; i++) arr[i] = arr[i - 1] + arr[i]; // Formed the prefix sum array  O(N)
 
             var list = new List<int>();
 
             // Finding range sum for all requested ranges -> O(1) for each => O(M)
             foreach (var range in ranges)
-            {
                 if (range[0] == 0)
                     list.Add(arr[range[1]]);
                 else
-                {
                     list.Add(arr[range[1]] - arr[range[0] - 1]);
-                }
-            }
 
             return list;
         }

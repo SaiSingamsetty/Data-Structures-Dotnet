@@ -44,14 +44,10 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
             var list = new List<int>();
             var actualLookUp = new Dictionary<char, int>();
             foreach (var eachChar in p)
-            {
                 if (actualLookUp.ContainsKey(eachChar))
                     actualLookUp[eachChar]++;
                 else
-                {
                     actualLookUp[eachChar] = 1;
-                }
-            }
 
             for (var i = 0; i < s.Length; i++)
             {
@@ -63,10 +59,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
                     {
                         var counter = 0;
                         foreach (var (eachChar, freq) in tempLookUp)
-                        {
                             if (actualLookUp[eachChar] == freq)
                                 counter++;
-                        }
 
                         if (counter == actualLookUp.Keys.Count)
                         {
@@ -79,16 +73,14 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
                         break;
 
                     if (!actualLookUp.ContainsKey(s[i + j]))
-                        break;
-                    else
                     {
-                        if (tempLookUp.ContainsKey(s[i + j]))
-                            tempLookUp[s[i + j]]++;
-                        else
-                        {
-                            tempLookUp[s[i + j]] = 1;
-                        }
+                        break;
                     }
+
+                    if (tempLookUp.ContainsKey(s[i + j]))
+                        tempLookUp[s[i + j]]++;
+                    else
+                        tempLookUp[s[i + j]] = 1;
                 }
             }
 
@@ -140,10 +132,8 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekThree
         private static bool CompareArraysHelper(int[] a, int[] b)
         {
             for (var i = 0; i < 25; i++)
-            {
                 if (a[i] != b[i])
                     return false;
-            }
 
             return true;
         }

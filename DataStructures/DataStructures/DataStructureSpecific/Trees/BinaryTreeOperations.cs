@@ -56,20 +56,16 @@ namespace DataStructures.DataStructureSpecific.Trees
                     pointer.LeftChild = new TreeNode<T>(value);
                     break;
                 }
-                else
-                {
-                    queue.Enqueue(pointer.LeftChild);
-                }
+
+                queue.Enqueue(pointer.LeftChild);
 
                 if (pointer.RightChild == null)
                 {
                     pointer.RightChild = new TreeNode<T>(value);
                     break;
                 }
-                else
-                {
-                    queue.Enqueue(pointer.RightChild);
-                }
+
+                queue.Enqueue(pointer.RightChild);
             }
         }
 
@@ -86,10 +82,7 @@ namespace DataStructures.DataStructureSpecific.Trees
             while (queue.Count != 0)
             {
                 bottomNode = queue.Dequeue();
-                if (bottomNode.Data == (dynamic) value && keyNode == null)
-                {
-                    keyNode = bottomNode;
-                }
+                if (bottomNode.Data == (dynamic) value && keyNode == null) keyNode = bottomNode;
 
                 if (bottomNode.LeftChild != null)
                     queue.Enqueue(bottomNode.LeftChild);

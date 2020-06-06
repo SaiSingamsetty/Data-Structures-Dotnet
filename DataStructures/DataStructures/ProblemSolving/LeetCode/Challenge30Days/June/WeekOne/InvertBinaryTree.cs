@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne.Models;
+﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne.Models;
 
 namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne
 {
@@ -41,6 +38,5 @@ namespace DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne
 
             return root;
         }
-        
     }
 }
