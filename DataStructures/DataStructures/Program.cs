@@ -4,6 +4,8 @@ using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFive;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
+using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.DynamicProgramming;
+using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.LinkedLists;
 
 namespace DataStructures
 {
@@ -12,8 +14,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            RandomPickWithWeight.Init();
-
+            
 
             /* To-Do's and Refactorings */
             Todo();
