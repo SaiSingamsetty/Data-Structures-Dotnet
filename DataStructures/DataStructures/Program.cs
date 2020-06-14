@@ -1,11 +1,9 @@
-﻿using System;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekOne;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFive;
+﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFive;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
-using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.DynamicProgramming;
-using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.LinkedLists;
+using System;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.June.WeekTwo;
 
 namespace DataStructures
 {
