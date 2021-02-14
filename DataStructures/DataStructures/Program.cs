@@ -11,8 +11,9 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-
-            /* To-Do's and Refactorings */
+            
+            
+            /* To-Do and Refactorings */
             Todo();
             Refactor();
             Console.ReadKey();
