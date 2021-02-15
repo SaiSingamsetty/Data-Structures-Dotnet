@@ -12,7 +12,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            
+            CountAndSay.Execute();
             
             /* To-Do and Refactorings */
             Todo();
