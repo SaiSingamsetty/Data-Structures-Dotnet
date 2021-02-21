@@ -8,7 +8,7 @@ using DataStructures.ProblemSolving.LeetCode.Challenge30Days.Feb21Own.Week3;
 namespace DataStructures
 {
     public class Program
-    {
+    {  
         private static void Main()
         {
             /* Current Problem */
