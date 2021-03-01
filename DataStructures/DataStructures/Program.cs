@@ -4,6 +4,7 @@ using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.Feb21Own.Week3;
+using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings;
 
 namespace DataStructures
 {
@@ -12,7 +13,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            CountAndSay.Execute();
+            LongestCommonPrefix.Execute();
             
             /* To-Do and Refactorings */
             Todo();
