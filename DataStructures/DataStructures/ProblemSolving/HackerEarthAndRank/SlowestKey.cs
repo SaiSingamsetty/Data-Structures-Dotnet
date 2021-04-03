@@ -34,6 +34,6 @@ namespace DataStructures.ProblemSolving.HackerEarthAndRank
 
             return keyPressed;
         }
-
+        
     }
 }

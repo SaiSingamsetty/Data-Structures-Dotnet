@@ -9,6 +9,7 @@ namespace DataStructures.ProblemSolving.HackerEarthAndRank
         public static void Execute()
         {
             var res1 = Find(new[] {4, 6, 12, 8}, 14); //Output : 1,2,3,5
+            var res2 = Find(new[] {2, 4, 5}, 7); //Output : 1, 3
         }
 
         private static List<int> Find(int[] collection, int d)
@@ -27,8 +28,9 @@ namespace DataStructures.ProblemSolving.HackerEarthAndRank
                     start = collection[i - 1] + 1;
                 }
 
-                var end = i != collection.Length ? collection[i] : int.MaxValue;
+                var end = i != collection.Length ? collection[i] : d;
 
+                // if the budget is less than 'start' we can break here
                 if(d < start)
                     break;
 
@@ -43,7 +45,6 @@ namespace DataStructures.ProblemSolving.HackerEarthAndRank
                     {
                         break;
                     }
-                    
                 }
             }
             
