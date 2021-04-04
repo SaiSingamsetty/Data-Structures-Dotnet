@@ -4,6 +4,7 @@ using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
 using DataStructures.ProblemSolving.HackerEarthAndRank;
+using DataStructures.ProblemSolving.HackerEarthAndRank.Arrays;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.April21.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.Feb21Own.Week3;
 using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings;
@@ -15,7 +16,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            HackerCards.Execute();
+            MinimumSwaps.Execute();
             
             /* To-Do and Refactorings */
             Todo();
