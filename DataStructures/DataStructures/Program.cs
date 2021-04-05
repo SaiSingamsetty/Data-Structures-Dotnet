@@ -5,18 +5,19 @@ using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
 using DataStructures.ProblemSolving.HackerEarthAndRank;
 using DataStructures.ProblemSolving.HackerEarthAndRank.Arrays;
+using DataStructures.ProblemSolving.HackerEarthAndRank.Strings;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.April21.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.Feb21Own.Week3;
 using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings;
 
 namespace DataStructures
 {
-    public class Program
+    public static class Program
     {  
         private static void Main()
         {
             /* Current Problem */
-            MinimumSwaps.Execute();
+            SpecialStringAgain.Execute();
             
             /* To-Do and Refactorings */
             Todo();
