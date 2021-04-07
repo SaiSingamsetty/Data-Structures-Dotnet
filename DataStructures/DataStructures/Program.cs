@@ -1,14 +1,11 @@
-﻿using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFive;
+﻿using DataStructures.ProblemSolving.HackerEarthAndRank.DynPro;
+using DataStructures.ProblemSolving.HackerEarthAndRank.Strings;
+using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFive;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
-using DataStructures.ProblemSolving.HackerEarthAndRank;
-using DataStructures.ProblemSolving.HackerEarthAndRank.Arrays;
-using DataStructures.ProblemSolving.HackerEarthAndRank.Strings;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days.April21.WeekOne;
-using DataStructures.ProblemSolving.LeetCode.Challenge30Days.Feb21Own.Week3;
-using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Strings;
+using DataStructures.DataStructureSpecific.DynamicProgramming;
 
 namespace DataStructures
 {
@@ -17,6 +14,11 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
+            OnTheWayHome.Execute();
+
+            StairwayToHeaven2.Execute();
+            Abbreviation.Execute();
+            CommonChild.Execute();
             SpecialStringAgain.Execute();
             
             /* To-Do and Refactorings */
