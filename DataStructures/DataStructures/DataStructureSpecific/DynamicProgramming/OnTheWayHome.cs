@@ -8,9 +8,10 @@ namespace DataStructures.DataStructureSpecific.DynamicProgramming
     {
         public static void Execute()
         {
-            var res1 = Find1(4, 4);
+            var res1 = FindRecursive(4, 4);
         }
 
+        //from 0,0 to m,n
         private static int Find1(int m, int n)
         {
             var memory = new int[m, n];
@@ -35,6 +36,17 @@ namespace DataStructures.DataStructureSpecific.DynamicProgramming
             return memory[m - 1, n - 1];
         }
 
+        private static int FindRecursive(int m, int n)
+        {
+            if (m == 1 || n == 1)
+            {
+                return 1;
+            }
+
+            return FindRecursive(m - 1, n) + FindRecursive(m, n - 1);
+        }
+
+        //from m,n to 0,0
         private static int Find2(int m, int n)
         {
             var memory = new int[m, n];

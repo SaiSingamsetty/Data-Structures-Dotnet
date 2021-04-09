@@ -9,7 +9,8 @@ namespace DataStructures.DataStructureSpecific.DynamicProgramming
     {
         public static void Execute()
         {
-            var res4 = FindUsingTopDown(5); //8
+            var res4 = FindUsingBottomUp(5); //8
+            var res5 = FindUsingBottomUpWithFaultyStair(5, 3); //2
         }
 
         //TE: O(N), SE: O(N)
@@ -28,6 +29,34 @@ namespace DataStructures.DataStructureSpecific.DynamicProgramming
                  * data of last two possibilities.
                  */
                 memory[i] = memory[i - 1] + memory[i - 2];
+            }
+
+            return memory[n];
+        }
+
+        //TE: O(N), SE: O(N)
+        private static int FindUsingBottomUpWithFaultyStair(int n, int faultAt)
+        {
+            var memory = new int[n + 1];
+            memory[0] = 1; // the only way to do this to do nothing
+            memory[1] = 1; // 1 step
+
+            for (var i = 2; i <= n; i++)
+            {
+                /* Either we can take one step or two steps
+                 * If we are calculating for 6, to reach 6,
+                 * there are two ways : either 2 steps from 4
+                 * or 1 step from 5. So calculating by taking
+                 * data of last two possibilities.
+                 */
+                if (i == faultAt)
+                {
+                    memory[i] = 0;
+                }
+                else
+                {
+                    memory[i] = memory[i - 1] + memory[i - 2];
+                }
             }
 
             return memory[n];

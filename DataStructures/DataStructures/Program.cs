@@ -14,7 +14,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            OnTheWayHome.Execute();
+            Stock.Execute();
 
             StairwayToHeaven2.Execute();
             Abbreviation.Execute();
