@@ -8,37 +8,64 @@ namespace DataStructures.ProblemSolving.HackerEarthAndRank.DynPro
     {
         public static void Execute()
         {
-            var res1 = Find("daBcd", "ABC");
+            var res1 = Find("AbcDE", "ABDE"); //Yes
+            var res2 = Find("AbcDE", "AFDE"); //No
+            var res3 = Find("daBcd", "ABC"); //Yes
+            var res4 = Find("AfPZN", "APZNC"); //Yes
         }
 
         private static string Find(string a, string b)
         {
-            var response = AbbreviationFunction(a, b);
+            var response = AbbreviationFunction(a.ToCharArray(), b.ToCharArray(), a.Length, b.Length);
             return response ? "YES" : "NO";
         }
 
-        private static bool AbbreviationFunction(string a, string b)
+        private static bool AbbreviationFunction(char[] a, char[] b, int aPointer, int bPointer)
         {
-            var aLen = a.Length;
-            var bLen = b.Length;
-
-            if (a[aLen-1] == b[bLen-1])
+            if (aPointer < bPointer)
             {
-                return AbbreviationFunction(a.Substring(0, aLen - 1), b.Substring(0, bLen - 1));
+                return false;
             }
 
-            if (a[aLen - 1] + 26 == b[bLen - 1])
+            if (aPointer <= 0 && bPointer > 0)
             {
-                var x = AbbreviationFunction(a.Substring(0, aLen - 1), b.Substring(0, bLen))
-                        || AbbreviationFunction(a.Substring(0, aLen - 1), b.Substring(0, bLen));
+                return false;
             }
 
-            if(IsLowerCase(a[aLen - 1]))
+            if (bPointer <= 0)
             {
-                return AbbreviationFunction(a.Substring(0, aLen - 1), b);
+                for (int i = 0; i < aPointer; i++)
+                {
+                    if (!IsLowerCase(a[aPointer - 1]))
+                    {
+                        return false;
+                    }
+
+                    aPointer--;
+                }
             }
 
-            return true;
+            if (aPointer == 0 && bPointer == 0)
+            {
+                return true;
+            }
+
+            if (a[aPointer - 1] == b[bPointer - 1])
+            {
+                return AbbreviationFunction(a, b, aPointer - 1, bPointer - 1);
+            }
+
+            if (a[aPointer - 1] - 32 == b[bPointer - 1])
+            {
+                return AbbreviationFunction(a, b, aPointer - 1, bPointer - 1);
+            }
+
+            if(IsLowerCase(a[aPointer - 1]))
+            {
+                return AbbreviationFunction(a, b, aPointer - 1, bPointer);
+            }
+
+            return false;
         }
 
         private static bool IsLowerCase(char c)

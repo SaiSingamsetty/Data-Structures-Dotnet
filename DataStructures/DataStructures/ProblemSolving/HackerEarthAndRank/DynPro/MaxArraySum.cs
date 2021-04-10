@@ -21,7 +21,8 @@ namespace DataStructures.ProblemSolving.HackerEarthAndRank.DynPro
             lookUp[1] = Math.Max(arr[0], arr[1]);
             for (var i = 2; i < arr.Length; i++)
             {
-                // Max till now = Max of (Number itself, number + max value from lookup excluding previous element, previous look up)
+                // Max till now = Max of
+                // (Number itself, number + max value from lookup excluding previous element, previous look up)
                 lookUp[i] = Math.Max(arr[i], Math.Max(arr[i] + lookUp[i - 2], lookUp[i - 1]));
             }
 
