@@ -1,11 +1,12 @@
-﻿using DataStructures.ProblemSolving.HackerEarthAndRank.DynPro;
+﻿using DataStructures.DataStructureSpecific.DynamicProgramming;
+using DataStructures.ProblemSolving.HackerEarthAndRank.Dictionaries;
+using DataStructures.ProblemSolving.HackerEarthAndRank.DynPro;
 using DataStructures.ProblemSolving.HackerEarthAndRank.Strings;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFive;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
-using DataStructures.DataStructureSpecific.DynamicProgramming;
 
 namespace DataStructures
 {
@@ -14,8 +15,9 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            Abbreviation.Execute();
 
+
+            CountTriplets.Execute();
             StairwayToHeaven2.Execute();
             Abbreviation.Execute();
             CommonChild.Execute();
