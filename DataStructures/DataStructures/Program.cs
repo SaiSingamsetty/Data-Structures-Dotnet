@@ -9,6 +9,8 @@ using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
 using DataStructures.ProblemSolving.HackerEarthAndRank.GreedyAlgo;
 using DataStructures.ProblemSolving.HackerEarthAndRank.Sorting;
+using DataStructures.ProblemSolving.HackerEarthAndRank.StacksAndQueues;
+using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays;
 
 namespace DataStructures
 {
@@ -17,7 +19,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            LuckBalance.Execute();
+            RemoveAdjDupInAString1047.Execute();
 
             CountTriplets.Execute();
             StairwayToHeaven2.Execute();
