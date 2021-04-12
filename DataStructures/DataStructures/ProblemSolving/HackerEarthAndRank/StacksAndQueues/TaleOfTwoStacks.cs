@@ -25,64 +25,66 @@ namespace DataStructures.ProblemSolving.HackerEarthAndRank.StacksAndQueues
             });
         }
 
+        private static readonly Stack<int> NewStack = new Stack<int>();
+        private static readonly Stack<int> OldStack = new Stack<int>();
+        
         private static void Execute(string[] args)
         {
-            var firstStack = new Stack<int>();
-            var secondStack = new Stack<int>();
-
             var tasks = Convert.ToInt32(Console.ReadLine());
+
             while (tasks >= 0)
             {
-                var cmdValues = Console.ReadLine()?.Split(' ').Select(int.Parse).ToList();
-                if(cmdValues == null)
-                    continue;
-
-                if (cmdValues[0] == 1)
+                var cmdValues = Console.ReadLine()?.Split(' ');
+                if (cmdValues == null)
+                    break;
+                
+                if (cmdValues[0] == "1")
                 {
                     //Enqueue
-                    firstStack.Push(cmdValues[1]);
+                    Enqueue(Convert.ToInt32(cmdValues[1]));
                 }
-                else if(cmdValues[0] == 2)
+                else if(cmdValues[0] == "2")
                 {
                      //Dequeue
-                     if (secondStack.Count == 0)
-                     {
-                         while (firstStack.Count > 0)
-                         {
-                            secondStack.Push(firstStack.Pop());
-                         }
-                     }
-
-                     secondStack.Pop();
+                     Dequeue();
                 }
-                else if (cmdValues[0] == 3)
+                else if (cmdValues[0] == "3")
                 {
                     //Print first element on queue
-                    if (secondStack.Count == 0)
-                    {
-                        if (firstStack.Count == 0)
-                        {
-                            Console.WriteLine("Queue is empty");
-                            continue;
-                        }
-
-                        while (firstStack.Count > 0)
-                        {
-                            secondStack.Push(firstStack.Pop());
-                        }
-                    }
-
-                    Console.WriteLine(secondStack.Peek());
-                }
-                else
-                {
-                    //Continue
-                    continue;
+                    Console.WriteLine(GetFrontValue());
                 }
 
                 tasks--;
             }
 
+        }
+
+        private static void Enqueue(int value)
+        {
+            NewStack.Push(value);
+        }
+
+        private static int GetFrontValue()
+        {
+            PopulateOldStack();
+            return OldStack.Peek();
+        }
+
+        private static void Dequeue()
+        {
+            PopulateOldStack();
+            OldStack.Pop();
+        }
+
+        private static void PopulateOldStack()
+        {
+            if (OldStack.Count == 0)
+            {
+                while (NewStack.Count != 0)
+                {
+                    OldStack.Push(NewStack.Pop());
+                }
+            }
         }
     }
 }

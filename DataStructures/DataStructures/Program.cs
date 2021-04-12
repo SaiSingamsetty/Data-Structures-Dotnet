@@ -19,7 +19,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            RemoveAdjDupInAString1047.Execute();
+            TaleOfTwoStacks.Execute();
 
             CountTriplets.Execute();
             StairwayToHeaven2.Execute();
