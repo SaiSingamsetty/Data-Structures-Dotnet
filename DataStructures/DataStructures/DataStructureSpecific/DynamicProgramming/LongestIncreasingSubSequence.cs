@@ -8,7 +8,7 @@ namespace DataStructures.DataStructureSpecific.DynamicProgramming
     {
         public static void Execute()
         {
-            var res1 = FindUsingRecursiveApproach(new int[] { -1, 3, 4, 5, 2, 8 });
+            var res1 = FindUsingRecursiveApproach(new int[] { -1, 4, 3, 5, 2, 8 });
         }
 
         //Dynamic Programming

@@ -8,6 +8,7 @@ using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
+using DataStructures.DataStructureSpecific;
 using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.LinkedLists;
 
 namespace DataStructures
@@ -17,7 +18,10 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            DetectCycle.Execute();
+            LongestIncreasingSubSequence.Execute();
+
+            var obj = new LruCacheTest();
+            obj.TestCache();
 
             CountTriplets.Execute();
             StairwayToHeaven2.Execute();
