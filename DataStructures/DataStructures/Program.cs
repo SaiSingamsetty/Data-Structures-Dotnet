@@ -1,16 +1,14 @@
 ﻿using DataStructures.DataStructureSpecific.DynamicProgramming;
 using DataStructures.ProblemSolving.HackerEarthAndRank.Dictionaries;
 using DataStructures.ProblemSolving.HackerEarthAndRank.DynPro;
+using DataStructures.ProblemSolving.HackerEarthAndRank.LinkedLists;
 using DataStructures.ProblemSolving.HackerEarthAndRank.Strings;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFive;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekFour;
 using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
-using DataStructures.ProblemSolving.HackerEarthAndRank.GreedyAlgo;
-using DataStructures.ProblemSolving.HackerEarthAndRank.Sorting;
-using DataStructures.ProblemSolving.HackerEarthAndRank.StacksAndQueues;
-using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.Arrays;
+using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.LinkedLists;
 
 namespace DataStructures
 {
@@ -19,7 +17,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            TaleOfTwoStacks.Execute();
+            MergePointsOfAList.Execute();
 
             CountTriplets.Execute();
             StairwayToHeaven2.Execute();
