@@ -17,7 +17,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            MergePointsOfAList.Execute();
+            DetectCycle.Execute();
 
             CountTriplets.Execute();
             StairwayToHeaven2.Execute();
