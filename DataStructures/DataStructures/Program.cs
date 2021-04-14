@@ -19,7 +19,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            ThiefAndCoins.Execute();
+            ProfitMaximization.Execute();
 
             var obj = new LruCacheTest();
             obj.TestCache();
