@@ -34,12 +34,7 @@ namespace DataStructures.ProblemSolving.HackerEarthAndRank.LinkedLists
         private static bool Detect(ListNode head)
         {
             HashSet<ListNode> set = new HashSet<ListNode>();
-
-            HashSet<string> t = new HashSet<string>();
-            t.Add("aa");
-            t.Add("ab");
-            t.Add("aa");
-
+            
             while (head != null)
             {
                 if (set.Contains(head))
