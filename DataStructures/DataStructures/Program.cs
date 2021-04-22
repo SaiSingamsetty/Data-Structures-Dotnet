@@ -9,6 +9,7 @@ using DataStructures.ProblemSolving.LeetCode.Challenge30Days.May.WeekOne;
 using DataStructures.ProblemSolving.LeetCode.Problems;
 using System;
 using DataStructures.DataStructureSpecific;
+using DataStructures.ProblemSolving.HackerEarthAndRank;
 using DataStructures.ProblemSolving.LeetCode.TopInterviewQuestions.LinkedLists;
 using DataStructures.ProblemSolving.OtherPlatforms;
 
@@ -19,7 +20,9 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            ProfitMaximization.Execute();
+            LengthOfPositiveProduct.Execute();
+
+
 
             var obj = new LruCacheTest();
             obj.TestCache();
