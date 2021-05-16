@@ -20,7 +20,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            LengthOfPositiveProduct.Execute();
+            SubSetSum.Execute();
 
 
 
