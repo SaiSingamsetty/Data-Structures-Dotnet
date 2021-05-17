@@ -20,9 +20,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            SubSetSum.Execute();
-
-
+            MergeIntervalsLc56.Execute();
 
             var obj = new LruCacheTest();
             obj.TestCache();
