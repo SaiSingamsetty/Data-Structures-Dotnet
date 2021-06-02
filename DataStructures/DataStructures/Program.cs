@@ -23,7 +23,7 @@ namespace DataStructures
             /* Current Problem */
             LongestPalindromicSubString.Execute();
 
-            var obj = new LruCacheTest();
+            var obj = new LruCacheTest(); 
             obj.TestCache();
 
             CountTriplets.Execute();
