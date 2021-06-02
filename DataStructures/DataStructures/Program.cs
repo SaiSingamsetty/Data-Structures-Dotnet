@@ -21,7 +21,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            LowestCommonAncestor.Execute();
+            LongestPalindromicSubString.Execute();
 
             var obj = new LruCacheTest();
             obj.TestCache();
