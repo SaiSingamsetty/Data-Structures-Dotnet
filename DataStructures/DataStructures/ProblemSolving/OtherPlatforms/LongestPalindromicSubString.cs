@@ -8,6 +8,7 @@ namespace DataStructures.ProblemSolving.OtherPlatforms
     {
         public static void Execute()
         {
+            var res2 = Find2("babad");
             var res0 = Find2("agedegs"); // gedeg
             var res1 = Find2("forgeeksskeegfor"); //geeksskeeg
         }
@@ -52,7 +53,7 @@ namespace DataStructures.ProblemSolving.OtherPlatforms
                 {
                     //table(start, end) = str(start) == str(end) and table[start + 1, end - 1] should be palindrome
                     table[j, j + i] = str[j] == str[j + i] && table[j + 1, j + i - 1];
-                    if (table[j, j + i] && i > maxLength)
+                    if (table[j, j + i] && i + 1 > maxLength)
                     {
                         // if i value is greater than maxLength, save maxLength and start of the palindrome
                         maxLength = i + 1;
