@@ -21,7 +21,7 @@ namespace DataStructures
         private static void Main()
         {
             /* Current Problem */
-            LongestPalindromicSubstringLc5.Execute();
+            ThreeSumLc15.Execute();
 
             var obj = new LruCacheTest(); 
             obj.TestCache();
